@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfkkc"]
 size = Vector2(12.4701, 20)
 
-[node name="Booster" type="CharacterBody2D" groups=["Booster", "Piece"]]
+[node name="Booster" type="CharacterBody2D" groups=["Booster", "Component"]]
 script = ExtResource("1_6tacm")
 speed = 12.0
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://gjus2b6qt6k1"]
+[gd_scene load_steps=6 format=3 uid="uid://gjus2b6qt6k1"]
 
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="1_7nyfi"]
 [ext_resource type="Script" uid="uid://ravio3b5trcs" path="res://Scripts/ship.gd" id="1_ba1si"]
@@ -6,6 +6,9 @@
 [sub_resource type="SphereMesh" id="SphereMesh_2wqeq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wqeq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_88h6h"]
+radius = 57.8129
 
 [node name="Ship" type="CharacterBody2D"]
 script = ExtResource("1_ba1si")
@@ -23,9 +26,17 @@ shape = SubResource("CircleShape2D_2wqeq")
 
 [node name="Boosters" type="Node2D" parent="Components"]
 
-[node name="Booster" parent="Components/Boosters" instance=ExtResource("1_7nyfi")]
+[node name="Booster1" parent="Components/Boosters" instance=ExtResource("1_7nyfi")]
 position = Vector2(0, -71)
 attached = true
 
 [node name="ForwardPos" type="Node2D" parent="."]
 position = Vector2(0, 9)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.00339, 1)
+shape = SubResource("CircleShape2D_88h6h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

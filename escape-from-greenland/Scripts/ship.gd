@@ -16,3 +16,12 @@ func _physics_process(delta: float) -> void:
 	var turn_axis = Input.get_axis('left', 'right')
 	rotate(deg_to_rad(turn_speed * turn_axis))
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group('Component'):
+		if body.attached:
+			print_debug("It's attached")
+			return
+		if body.is_in_group('Booster'):
+			$Components/Boosters.add_child.call_deferred(body)
