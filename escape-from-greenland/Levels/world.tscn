@@ -1,11 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=2 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
-[ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="1_pbelu"]
 
 [node name="World" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
-
-[node name="Booster" parent="." instance=ExtResource("1_pbelu")]
-position = Vector2(2, -76)
+position = Vector2(571, 323)
