@@ -29,12 +29,28 @@ rotation = 1.67462
 position = Vector2(732, -273)
 rotation = -0.108523
 
+[node name="Booster4" parent="Items" instance=ExtResource("2_kycxd")]
+position = Vector2(1047, 639)
+rotation = -0.108523
+
+[node name="Booster5" parent="Items" instance=ExtResource("2_kycxd")]
+position = Vector2(286, -194)
+rotation = -0.108523
+
 [node name="Booster3" parent="Items" instance=ExtResource("2_kycxd")]
 position = Vector2(74, -315)
 rotation = -1.39699
 
 [node name="Gun" parent="Items" instance=ExtResource("3_pa6j6")]
 position = Vector2(106, -89)
+rotation = 1.18919
+
+[node name="Gun2" parent="Items" instance=ExtResource("3_pa6j6")]
+position = Vector2(323, 314)
+rotation = 1.18919
+
+[node name="Gun3" parent="Items" instance=ExtResource("3_pa6j6")]
+position = Vector2(1552, -197)
 rotation = 1.18919
 
 [node name="Backgrounds" type="Node2D" parent="."]

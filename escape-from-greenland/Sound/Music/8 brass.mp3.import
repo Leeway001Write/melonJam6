@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cjay4j2ocr6md"
+path="res://.godot/imported/8 brass.mp3-5a31b65a9bf36411e630f883c4500f94.mp3str"
+
+[deps]
+
+source_file="res://Sound/Music/8 brass.mp3"
+dest_files=["res://.godot/imported/8 brass.mp3-5a31b65a9bf36411e630f883c4500f94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

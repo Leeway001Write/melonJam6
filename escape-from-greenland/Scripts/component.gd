@@ -45,11 +45,11 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func _hurt():
 	if invincible: return
 	health -= 1
+	get_tree().get_first_node_in_group('Cam').shake()
 	if health <= 0:
-		Engine.time_scale = .01
-		await get_tree().create_timer(.013).timeout
-		Engine.time_scale = 1
-		get_tree().get_first_node_in_group('Cam').shake()
+		#Engine.time_scale = .01
+		#await get_tree().create_timer(.013).timeout
+		#Engine.time_scale = 1
 		destroy()
 
 func invincibility():
