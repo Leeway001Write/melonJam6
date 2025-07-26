@@ -1,6 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=19 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
+[ext_resource type="Texture2D" uid="uid://pqyap8wjxwus" path="res://Art/backgrounds/health-planet.png" id="2_v0p3n"]
+[ext_resource type="Texture2D" uid="uid://dga5sunif18bf" path="res://Art/backgrounds/pink-purple/pink1.png" id="2_x5oxt"]
+[ext_resource type="Texture2D" uid="uid://bn57s67hq2t6x" path="res://Art/backgrounds/pink-purple/pink2.png" id="3_vqnaq"]
+[ext_resource type="Texture2D" uid="uid://cyndxbmuaxn10" path="res://Art/backgrounds/pink-purple/purple1.png" id="4_rljl1"]
+[ext_resource type="Texture2D" uid="uid://d07qj2h6dtkdf" path="res://Art/backgrounds/pink-purple/purple2.png" id="5_06jdw"]
+[ext_resource type="Texture2D" uid="uid://525ix3uu0f82" path="res://Art/backgrounds/pink-purple/purple3.png" id="6_7ey7r"]
+[ext_resource type="Texture2D" uid="uid://c0ekyv2qksih8" path="res://Art/backgrounds/blue-green/blue1.png" id="7_ay5oo"]
+[ext_resource type="Texture2D" uid="uid://bs3jux66joeee" path="res://Art/backgrounds/yellow-orange/orange1.png" id="8_4eob5"]
+[ext_resource type="Texture2D" uid="uid://bdufyjrg02iqk" path="res://Art/backgrounds/blue-green/blue2.png" id="8_v0p3n"]
+[ext_resource type="Texture2D" uid="uid://dkwapvxdypn5h" path="res://Art/backgrounds/yellow-orange/orange2.png" id="9_ikoig"]
+[ext_resource type="Texture2D" uid="uid://5havptlnfwr5" path="res://Art/backgrounds/blue-green/green2.png" id="10_4r8rk"]
+[ext_resource type="Texture2D" uid="uid://dkd3ofcxtn75q" path="res://Art/backgrounds/yellow-orange/orange3.png" id="10_oyb16"]
+[ext_resource type="Texture2D" uid="uid://c06k365d7rs8c" path="res://Art/backgrounds/blue-green/green1.png" id="10_ypq2k"]
+[ext_resource type="Texture2D" uid="uid://b8hh5enqwc65x" path="res://Art/backgrounds/yellow-orange/orange4.png" id="11_43wwi"]
+[ext_resource type="Texture2D" uid="uid://c1gobeoeddtrl" path="res://Art/backgrounds/blue-green/green3.png" id="11_44brb"]
+[ext_resource type="Texture2D" uid="uid://cbvvh5y3dlqqw" path="res://Art/backgrounds/yellow-orange/yellow1.png" id="12_gtojq"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
 
@@ -26,6 +42,12 @@ mesh = SubResource("QuadMesh_4dvsh")
 
 [node name="Background" type="Node2D" parent="Q1/Art"]
 
+[node name="Sprite2D" type="Sprite2D" parent="Q1/Art/Background"]
+z_index = -89
+position = Vector2(11752, -7766)
+scale = Vector2(2.23342, 2.23342)
+texture = ExtResource("2_v0p3n")
+
 [node name="Q2" type="Node2D" parent="."]
 
 [node name="Enemies" type="Node2D" parent="Q2"]
@@ -37,6 +59,41 @@ mesh = SubResource("QuadMesh_4dvsh")
 [node name="Art" type="Node2D" parent="Q2"]
 
 [node name="Background" type="Node2D" parent="Q2/Art"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Q2/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-13528, -6667.25)
+scale = Vector2(4.64066, 4.89085)
+texture = ExtResource("2_x5oxt")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Q2/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-10265, -7751.25)
+scale = Vector2(6.95214, 6.95214)
+texture = ExtResource("3_vqnaq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Q2/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-13135, -9651.25)
+scale = Vector2(3.40718, 3.40718)
+texture = ExtResource("4_rljl1")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Q2/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-10355, -4148.25)
+scale = Vector2(4.68182, 4.37896)
+texture = ExtResource("5_06jdw")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Q2/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-4742.02, -8029.25)
+scale = Vector2(2.15258, 2.15258)
+texture = ExtResource("6_7ey7r")
 
 [node name="Q3" type="Node2D" parent="."]
 
@@ -50,6 +107,49 @@ mesh = SubResource("QuadMesh_4dvsh")
 
 [node name="Background" type="Node2D" parent="Q3/Art"]
 
+[node name="Sprite2D6" type="Sprite2D" parent="Q3/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-14653, 8541)
+scale = Vector2(4.64066, 4.89085)
+texture = ExtResource("8_4eob5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Q3/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-9789.02, 6531.75)
+scale = Vector2(6.95214, 6.95214)
+texture = ExtResource("9_ikoig")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Q3/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-9789.02, 6531.75)
+scale = Vector2(6.95214, 6.95214)
+texture = ExtResource("9_ikoig")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Q3/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-13000, 4970)
+scale = Vector2(4.58164, 4.58164)
+texture = ExtResource("10_oyb16")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Q3/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(14581, -6014)
+scale = Vector2(4.68182, 4.37896)
+texture = ExtResource("11_43wwi")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Q3/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(-11506, 9706)
+rotation = -0.785397
+scale = Vector2(4.50129, 4.50129)
+texture = ExtResource("12_gtojq")
+
 [node name="Q4" type="Node2D" parent="."]
 
 [node name="Enemies" type="Node2D" parent="Q4"]
@@ -61,6 +161,48 @@ mesh = SubResource("QuadMesh_4dvsh")
 [node name="Art" type="Node2D" parent="Q4"]
 
 [node name="Background" type="Node2D" parent="Q4/Art"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Q4/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(9272.46, 6317.5)
+scale = Vector2(5.28488, 5.09676)
+texture = ExtResource("7_ay5oo")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Q4/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(15526, 6890)
+scale = Vector2(3.85597, 3.71871)
+texture = ExtResource("8_v0p3n")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Q4/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(15274, 4090)
+scale = Vector2(2.88993, 2.78706)
+texture = ExtResource("10_ypq2k")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Q4/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(14408, 9712)
+scale = Vector2(4.55, 4.38804)
+texture = ExtResource("10_4r8rk")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Q4/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(9932, 9703)
+scale = Vector2(5.64866, 5.9671)
+texture = ExtResource("11_44brb")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Q4/Art/Background"]
+modulate = Color(1, 1, 1, 0.486275)
+z_index = -90
+position = Vector2(11306, -8325)
+scale = Vector2(5.64866, 5.9671)
+texture = ExtResource("11_44brb")
 
 [node name="Q5" type="Node2D" parent="."]
 
