@@ -8,13 +8,13 @@ var move_vector = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
 	move_vector = Vector2.ZERO # Reinitialize it
+	for booster:Booster in $Components/Boosters.get_children():
+		move_vector += booster.dir_vector * booster.speed
 	if Input.is_action_pressed('forward'):
-		for booster:Booster in $Components/Boosters.get_children():
-			move_vector += booster.dir_vector
-	velocity += move_vector
+		velocity += move_vector
 	velocity /= 1.01
 	
-	$Arrow.rotation = atan2(move_vector.y, move_vector.x)
+	$Arrow.global_rotation = atan2(move_vector.y, move_vector.x)
 	
 	#var dir = Vector2($ForwardPos.global_position - global_position).normalized()
 	

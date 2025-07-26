@@ -1,7 +1,43 @@
-[gd_scene load_steps=2 format=3 uid="uid://run54ss7343y"]
+[gd_scene load_steps=5 format=3 uid="uid://run54ss7343y"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_v0bsi"]
+[ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="2_7asht"]
+[ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="3_jln1v"]
+[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="4_4wndq"]
 
 [node name="TestScene" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_v0bsi")]
+
+[node name="Asteroid" parent="." instance=ExtResource("2_7asht")]
+position = Vector2(-533, -279)
+
+[node name="Asteroid2" parent="." instance=ExtResource("2_7asht")]
+position = Vector2(607, 381)
+
+[node name="Asteroid3" parent="." instance=ExtResource("2_7asht")]
+position = Vector2(117, -384)
+
+[node name="Booster" parent="." instance=ExtResource("3_jln1v")]
+position = Vector2(-487, 226)
+
+[node name="Booster4" parent="." instance=ExtResource("3_jln1v")]
+position = Vector2(-328, 3)
+
+[node name="Booster2" parent="." instance=ExtResource("3_jln1v")]
+position = Vector2(-210, -300)
+
+[node name="Booster3" parent="." instance=ExtResource("3_jln1v")]
+position = Vector2(439, 142)
+
+[node name="Gun" parent="." instance=ExtResource("4_4wndq")]
+position = Vector2(-109, 245)
+
+[node name="Gun2" parent="." instance=ExtResource("4_4wndq")]
+position = Vector2(-729, 53)
+
+[node name="Gun3" parent="." instance=ExtResource("4_4wndq")]
+position = Vector2(606, -209)
+
+[node name="Gun4" parent="." instance=ExtResource("4_4wndq")]
+position = Vector2(236, 290)
