@@ -11,6 +11,7 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed('forward') and attached:
 		$CPUParticles2D.emitting = true
+
 	
 	if Input.is_action_just_released('forward') and attached:
 		$CPUParticles2D.emitting = false

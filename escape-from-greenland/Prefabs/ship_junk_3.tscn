@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ujyk5py8wvlf"]
+
+[ext_resource type="PackedScene" uid="uid://o2wqv4w0qqio" path="res://Prefabs/junk-component.tscn" id="1_6dp4f"]
+[ext_resource type="Texture2D" uid="uid://dnpowfsmtqavu" path="res://Art/player/player-ship.png" id="2_o01a1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6dp4f"]
+radius = 11.0113
+
+[node name="ShipJunk3" instance=ExtResource("1_6dp4f")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(-5, 0)
+rotation = 0.0154208
+scale = Vector2(0.225481, 0.225481)
+texture = ExtResource("2_o01a1")
+region_enabled = true
+region_rect = Rect2(1474, 1021, 553, 561)
+
+[node name="Area2D" parent="." index="1"]
+scale = Vector2(1.60028, 1.60028)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+scale = Vector2(2.35533, 1.44266)
+shape = SubResource("CircleShape2D_6dp4f")

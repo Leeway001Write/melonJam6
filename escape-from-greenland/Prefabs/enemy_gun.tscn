@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dq5diuh35es7e"]
 
-[ext_resource type="Script" uid="uid://cckfj4ob3h2rp" path="res://Scripts/enemy-gun.gd" id="1_nbj55"]
+[ext_resource type="Script" path="res://Scripts/enemy-gun.gd" id="1_nbj55"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_nbj55"]
 

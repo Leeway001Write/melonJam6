@@ -39,5 +39,6 @@ initial_velocity_max = 953.21
 angle_min = -720.0
 scale_amount_min = 12.7
 scale_amount_max = 12.7
+color = Color(0.51, 1, 0.5345, 0.556863)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
