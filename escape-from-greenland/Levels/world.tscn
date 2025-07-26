@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=26 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
+[ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_ikoig"]
 [ext_resource type="Texture2D" uid="uid://pqyap8wjxwus" path="res://Art/backgrounds/health-planet.png" id="2_v0p3n"]
 [ext_resource type="Texture2D" uid="uid://dga5sunif18bf" path="res://Art/backgrounds/pink-purple/pink1.png" id="2_x5oxt"]
 [ext_resource type="Texture2D" uid="uid://bn57s67hq2t6x" path="res://Art/backgrounds/pink-purple/pink2.png" id="3_vqnaq"]
@@ -19,8 +20,82 @@
 [ext_resource type="Texture2D" uid="uid://cbvvh5y3dlqqw" path="res://Art/backgrounds/yellow-orange/yellow1.png" id="12_gtojq"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="18_oyb16"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="19_43wwi"]
+[ext_resource type="Script" uid="uid://rpsbhilqwmsp" path="res://Scripts/score.gd" id="21_gtojq"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
+
+[sub_resource type="Animation" id="Animation_gtojq"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimCont/Score:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.400305, 0.401807, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimCont:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8mbvr"]
+resource_name = "Score"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimCont/Score:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0.400305, 0.401807, 1), Color(9.43363e-06, 0.809874, 0.812728, 1), Color(0, 0.400305, 0.401807, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimCont:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -114), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimCont:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3ug2"]
+_data = {
+&"Idle": SubResource("Animation_gtojq"),
+&"Score": SubResource("Animation_8mbvr")
+}
 
 [node name="World" type="Node2D"]
 
@@ -252,3 +327,27 @@ rotation = -2.47598
 [node name="Art" type="Node2D" parent="Q5"]
 
 [node name="Background" type="Node2D" parent="Q5/Art"]
+
+[node name="ScoreCont" type="Node2D" parent="."]
+z_index = -90
+script = ExtResource("21_gtojq")
+
+[node name="AnimCont" type="Node2D" parent="ScoreCont"]
+
+[node name="Score" type="RichTextLabel" parent="ScoreCont/AnimCont" groups=["UI"]]
+modulate = Color(0, 0.400305, 0.401807, 1)
+offset_left = -470.0
+offset_top = 196.0
+offset_right = 1536.0
+offset_bottom = 494.0
+scale = Vector2(0.467809, 0.467809)
+theme_override_fonts/normal_font = ExtResource("2_ikoig")
+theme_override_font_sizes/normal_font_size = 200
+text = "Score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScoreCont"]
+libraries = {
+&"": SubResource("AnimationLibrary_p3ug2")
+}

@@ -33,6 +33,7 @@ PlayerBullet=""
 Cam=""
 Asteroid=""
 Junk=""
+UI=""
 
 [input]
 
