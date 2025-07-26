@@ -108,48 +108,56 @@ libraries = {
 stream = ExtResource("9_c2nu4")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="Bass" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("6_dpy1d")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="Arpeggiator" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("7_dgasq")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="KickAndSnare" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("5_o8k4e")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="Strings" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("8_okhf4")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="HiHat" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("4_cm1ru")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="Flute" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("10_uc7nm")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="Brass" type="AudioStreamPlayer2D" parent="Camera2D/Audios"]
 stream = ExtResource("11_7cayt")
 volume_db = -80.0
 autoplay = true
+playback_type = 1
 parameters/looping = true
 
 [node name="Arrow" type="Node2D" parent="."]
