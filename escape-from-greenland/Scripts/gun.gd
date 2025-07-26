@@ -19,4 +19,5 @@ func _on_timer_timeout() -> void:
 	var bullet_inst:CharacterBody2D = bullet.instantiate()
 	bullet_inst.velocity = dir * speed + ship.velocity
 	bullet_inst.global_position = $ForwardPos.global_position
+	bullet_inst.global_rotation = atan2(dir.y, dir.x)
 	get_tree().root.add_child.call_deferred(bullet_inst)

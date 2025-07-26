@@ -1,8 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://br3u34a008r1n"]
+[gd_scene load_steps=8 format=3 uid="uid://br3u34a008r1n"]
 
 [ext_resource type="Script" uid="uid://e8mt00rruuy7" path="res://Scripts/bullet.gd" id="1_0oen4"]
+[ext_resource type="Texture2D" uid="uid://b5cek3p6hfbv" path="res://Art/player/bullet.png" id="2_m4f65"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_7dga7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuf4i"]
+atlas = ExtResource("2_m4f65")
+region = Rect2(0, 0, 334, 521)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nxya"]
+atlas = ExtResource("2_m4f65")
+region = Rect2(334, 0, 334, 521)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iohxx"]
+atlas = ExtResource("2_m4f65")
+region = Rect2(668, 0, 334, 521)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sxh4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuf4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nxya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iohxx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0oen4"]
 radius = 5.0
@@ -10,15 +38,20 @@ radius = 5.0
 [node name="Bullet" type="CharacterBody2D"]
 script = ExtResource("1_0oen4")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-position = Vector2(0, 1.42997e-06)
-scale = Vector2(29.1249, 29.1249)
-mesh = SubResource("SphereMesh_7dga7")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = -1
+rotation = 1.57079
+scale = Vector2(0.14187, 0.222312)
+sprite_frames = SubResource("SpriteFrames_1sxh4")
+autoplay = "default"
+frame_progress = 0.413441
 
 [node name="Area2D" type="Area2D" parent="." groups=["PlayerBullet"]]
+rotation = 1.57079
+scale = Vector2(2.13976, 2.13976)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(2.92843, 2.92843)
+scale = Vector2(2.00399, 3.78685)
 shape = SubResource("CircleShape2D_0oen4")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
