@@ -9,6 +9,8 @@ func _physics_process(delta: float) -> void:
 		for booster:Booster in $Components/Boosters.get_children():
 			velocity += booster.dir_vector
 	
+	velocity /= 1.01
+	
 	#var dir = Vector2($ForwardPos.global_position - global_position).normalized()
 	
 	var turn_axis = Input.get_axis('left', 'right')
