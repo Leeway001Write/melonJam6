@@ -10,7 +10,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_88h6h"]
 radius = 57.8129
 
-[node name="Ship" type="CharacterBody2D"]
+[node name="Ship" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ba1si")
 turn_speed = 5.0
 
