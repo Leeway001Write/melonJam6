@@ -30,7 +30,7 @@ mesh = SubResource("PrismMesh_e1giq")
 wait_time = 1.5
 one_shot = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["DamagePlayer"]]
 scale = Vector2(1.64328, 1.64328)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

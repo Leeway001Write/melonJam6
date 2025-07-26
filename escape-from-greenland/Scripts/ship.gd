@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	#var dir = Vector2($ForwardPos.global_position - global_position).normalized()
 	
 	var turn_axis = Input.get_axis('left', 'right')
-	rotate(deg_to_rad(turn_speed * turn_axis))
+	rotate(deg_to_rad(turn_speed * turn_axis) * Engine.time_scale)
 	move_and_slide()
 
 
