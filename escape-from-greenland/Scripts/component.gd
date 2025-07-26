@@ -29,7 +29,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		if not attached:
 			return
 		hit_something.emit(component, area)
-	elif area.is_in_group("DamagePlayer"):
+	elif area.is_in_group("DamagePlayer") and attached:
 		_hurt()
 
 func _hurt():

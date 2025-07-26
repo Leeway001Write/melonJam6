@@ -28,6 +28,7 @@ shape = SubResource("CircleShape2D_2wqeq")
 
 [node name="InitialBooster" parent="Components/Boosters" instance=ExtResource("1_7nyfi")]
 position = Vector2(0, -71)
+health = 10000
 test = true
 
 [node name="Guns" type="Node2D" parent="Components"]
