@@ -1,18 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=3 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
-[ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_kycxd"]
-[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_pa6j6"]
-[ext_resource type="PackedScene" uid="uid://rk3w2tikjskl" path="res://Prefabs/charging-enemy.tscn" id="4_4dvsh"]
-[ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="5_ks8n1"]
-[ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="6_x5oxt"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
 
 [node name="World" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
-position = Vector2(571, 81)
+scale = Vector2(0.871134, 0.726322)
 
 [node name="Backdrop" type="MeshInstance2D" parent="Ship"]
 modulate = Color(0.0283017, 0.0283017, 0.0283017, 1)
@@ -20,49 +15,62 @@ z_index = -99
 scale = Vector2(6354.16, 5170.86)
 mesh = SubResource("QuadMesh_4dvsh")
 
-[node name="Items" type="Node2D" parent="."]
+[node name="Q1" type="Node2D" parent="."]
 
-[node name="Booster" parent="Items" instance=ExtResource("2_kycxd")]
-position = Vector2(645, 224)
-rotation = 1.67462
+[node name="Enemies" type="Node2D" parent="Q1"]
 
-[node name="Booster2" parent="Items" instance=ExtResource("2_kycxd")]
-position = Vector2(732, -273)
-rotation = -0.108523
+[node name="Items" type="Node2D" parent="Q1"]
 
-[node name="Booster4" parent="Items" instance=ExtResource("2_kycxd")]
-position = Vector2(1047, 639)
-rotation = -0.108523
+[node name="Asteroids" type="Node2D" parent="Q1"]
 
-[node name="Booster5" parent="Items" instance=ExtResource("2_kycxd")]
-position = Vector2(286, -194)
-rotation = -0.108523
+[node name="Art" type="Node2D" parent="Q1"]
 
-[node name="Booster3" parent="Items" instance=ExtResource("2_kycxd")]
-position = Vector2(74, -315)
-rotation = -1.39699
+[node name="Background" type="Node2D" parent="Q1/Art"]
 
-[node name="Gun" parent="Items" instance=ExtResource("3_pa6j6")]
-position = Vector2(106, -89)
-rotation = 1.18919
+[node name="Q2" type="Node2D" parent="."]
 
-[node name="Gun2" parent="Items" instance=ExtResource("3_pa6j6")]
-position = Vector2(323, 314)
-rotation = 1.18919
+[node name="Enemies" type="Node2D" parent="Q2"]
 
-[node name="Gun3" parent="Items" instance=ExtResource("3_pa6j6")]
-position = Vector2(1552, -197)
-rotation = 1.18919
+[node name="Items" type="Node2D" parent="Q2"]
 
-[node name="Backgrounds" type="Node2D" parent="."]
+[node name="Asteroids" type="Node2D" parent="Q2"]
 
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Art" type="Node2D" parent="Q2"]
 
-[node name="ChargingEnemy" parent="Enemies" instance=ExtResource("4_4dvsh")]
-position = Vector2(-377, 0)
+[node name="Background" type="Node2D" parent="Q2/Art"]
 
-[node name="PathEnemy" parent="." instance=ExtResource("5_ks8n1")]
-position = Vector2(1137, 135)
+[node name="Q3" type="Node2D" parent="."]
 
-[node name="Asteroids" parent="." instance=ExtResource("6_x5oxt")]
-position = Vector2(1172, -297)
+[node name="Enemies" type="Node2D" parent="Q3"]
+
+[node name="Items" type="Node2D" parent="Q3"]
+
+[node name="Asteroids" type="Node2D" parent="Q3"]
+
+[node name="Art" type="Node2D" parent="Q3"]
+
+[node name="Background" type="Node2D" parent="Q3/Art"]
+
+[node name="Q4" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="Q4"]
+
+[node name="Items" type="Node2D" parent="Q4"]
+
+[node name="Asteroids" type="Node2D" parent="Q4"]
+
+[node name="Art" type="Node2D" parent="Q4"]
+
+[node name="Background" type="Node2D" parent="Q4/Art"]
+
+[node name="Q5" type="Node2D" parent="."]
+
+[node name="Enemies" type="Node2D" parent="Q5"]
+
+[node name="Items" type="Node2D" parent="Q5"]
+
+[node name="Asteroids" type="Node2D" parent="Q5"]
+
+[node name="Art" type="Node2D" parent="Q5"]
+
+[node name="Background" type="Node2D" parent="Q5/Art"]

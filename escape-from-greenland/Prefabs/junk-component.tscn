@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://o2wqv4w0qqio"]
+
+[ext_resource type="Script" uid="uid://cpd534xwxdjb8" path="res://Scripts/component.gd" id="1_2g848"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_2g848"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2g848"]
+
+[node name="JunkComponent" type="CharacterBody2D"]
+script = ExtResource("1_2g848")
+health = 3
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(70.5107, 163.531)
+mesh = SubResource("QuadMesh_2g848")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Component", "Junk"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(3.65633, 7.86377)
+shape = SubResource("RectangleShape2D_2g848")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

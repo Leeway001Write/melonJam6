@@ -4,8 +4,9 @@ class_name Component
 
 @export var attached:bool
 @export var health:int
-@export var test:bool
 @export var rot_range = Vector2(-1, 1) # Min and max rotation
+@export var initial:bool = false
+
 @onready var trigger:Area2D = $Area2D
 @onready var rot_speed = randf_range(rot_range.x, rot_range.y)
 
@@ -41,11 +42,10 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		invincible = false
 	elif area.is_in_group("DamagePlayer") and attached:
 		_hurt()
-	elif area.is_in_group('Asteroid'):
-		_hurt()
-		_hurt()
-		_hurt()
-		_hurt()
+	elif area.is_in_group('Asteroid') and not initial:
+		get_tree().get_first_node_in_group('Cam').shake()
+		get_tree().get_first_node_in_group('Cam').shake()
+		queue_free()
 
 func _hurt():
 	if invincible: return
@@ -59,7 +59,7 @@ func _hurt():
 
 func invincibility():
 	invincible = true
-	await get_tree().create_timer(1.1).timeout
+	await get_tree().create_timer(.7).timeout
 	invincible = false
 
 func destroy():

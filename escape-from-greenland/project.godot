@@ -32,6 +32,7 @@ DamagePlayer=""
 PlayerBullet=""
 Cam=""
 Asteroid=""
+Junk=""
 
 [input]
 

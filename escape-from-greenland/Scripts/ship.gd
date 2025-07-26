@@ -44,7 +44,9 @@ func _attach_item(component: Component, area: Area2D):
 	component.invincibility()
 	if area.is_in_group('Booster'):
 		component.reparent.call_deferred($Components/Boosters)
-	if area.is_in_group('Gun'):
+	elif area.is_in_group('Gun'):
 		component.reparent.call_deferred($Components/Guns)
+	elif area.is_in_group('Junk'):
+		component.reparent.call_deferred($Components/Junk)
 	await get_tree().process_frame
 	component.attached = true
