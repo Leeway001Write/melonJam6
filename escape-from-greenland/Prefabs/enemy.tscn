@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://boaxflxn4ts0a"]
 
-[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="1_leowk"]
 [ext_resource type="Script" uid="uid://dp8a02ntaxxoq" path="res://Scripts/enemy.gd" id="1_lgw76"]
+[ext_resource type="PackedScene" uid="uid://dq5diuh35es7e" path="res://Prefabs/enemy_gun.tscn" id="2_lgw76"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_govpq"]
 
@@ -26,12 +26,16 @@ scale = Vector2(196, 38)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CapsuleShape2D_leowk")
 
-[node name="Gun" parent="." instance=ExtResource("1_leowk")]
-position = Vector2(54, -77)
+[node name="Guns" type="Node2D" parent="."]
 rotation = -1.5708
-scale = Vector2(1, 1)
 
-[node name="Gun2" parent="." instance=ExtResource("1_leowk")]
-position = Vector2(54, 77)
-rotation = -1.5708
-scale = Vector2(1, 1)
+[node name="EnemyGun" parent="Guns" instance=ExtResource("2_lgw76")]
+position = Vector2(-75, 49)
+
+[node name="EnemyGun2" parent="Guns" instance=ExtResource("2_lgw76")]
+position = Vector2(75, 49)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

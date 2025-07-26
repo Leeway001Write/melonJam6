@@ -27,10 +27,5 @@ position = Vector2(106, -89)
 rotation = 1.18919
 
 [node name="Enemy" parent="." instance=ExtResource("4_4dvsh")]
-position = Vector2(-315, 75)
-
-[node name="Enemy2" parent="." instance=ExtResource("4_4dvsh")]
-position = Vector2(-196, -265)
-
-[node name="Enemy3" parent="." instance=ExtResource("4_4dvsh")]
-position = Vector2(-187, 430)
+position = Vector2(-252, -142)
+rotation = 0.306738

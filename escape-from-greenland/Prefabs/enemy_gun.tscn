@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq5diuh35es7e"]
+
+[ext_resource type="Script" uid="uid://cckfj4ob3h2rp" path="res://Scripts/enemy_gun.gd" id="1_nbj55"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_nbj55"]
+
+[node name="EnemyGun" type="Node2D"]
+script = ExtResource("1_nbj55")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+scale = Vector2(27.2546, 99.7855)
+mesh = SubResource("QuadMesh_nbj55")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0.129412, 1)
+position = Vector2(0, 43.9464)
+scale = Vector2(27.2546, 11.8928)
+mesh = SubResource("QuadMesh_nbj55")
+
+[node name="ForwardPos" type="Node2D" parent="."]
+position = Vector2(0, 46)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
