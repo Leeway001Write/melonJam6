@@ -9,5 +9,5 @@ func _process(delta: float) -> void:
 	
 func increase_score(amount:int):
 	score += amount
-	$AnimCont/Score.text = "Score: " + score
+	$AnimCont/Score.text = "Score: " + str(score)
 	$AnimationPlayer.play('Score')

@@ -4,8 +4,10 @@ class_name Enemy
 
 @export var health:int
 @export var max_player_dist = 1100
+@export var points:int = 15
 
 @onready var player:CharacterBody2D = get_tree().get_first_node_in_group('Player')
+@onready var score_manager = get_tree().get_first_node_in_group('Score')
 
 var activated = false
 var player_dist
@@ -21,6 +23,7 @@ func _hurt():
 		_die()
 		
 func _die(): # Guess I'll die *shrug*
+	score_manager.increase_score(points)
 	queue_free()
 	
 func _physics_process(delta: float) -> void:
