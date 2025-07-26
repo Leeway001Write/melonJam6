@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bn1lygxg8oxdq"]
+
+[ext_resource type="Script" uid="uid://nhaxthi3vtxm" path="res://Scripts/flying-enemy.gd" id="1_kegwy"]
+[ext_resource type="Script" uid="uid://cwrywos85w8re" path="res://Scripts/path-enemy-control.gd" id="1_lldgc"]
+
+[sub_resource type="Curve2D" id="Curve2D_lldgc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -5, 688, 0, 0, 0, 0, 148, 213, 0, 0, 0, 0, 878, 3, 0, 0, 0, 0, 158, -191, 0, 0, 0, 0, -7, -942, 0, 0, 0, 0, -178, -191, 0, 0, 0, 0, -1110, 0, 0, 0, 0, 0, -204, 208, 0, 0, 0, 0, -5, 688)
+}
+point_count = 9
+
+[sub_resource type="SphereMesh" id="SphereMesh_lldgc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lldgc"]
+
+[node name="PathEnemy" type="Path2D"]
+curve = SubResource("Curve2D_lldgc")
+script = ExtResource("1_lldgc")
+speed = 6.5
+max_dist = 900.0
+bullet_speed = 750.0
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-5, 688)
+rotation = -1.25918
+
+[node name="Enemy" type="CharacterBody2D" parent="."]
+script = ExtResource("1_kegwy")
+health = 3
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Enemy"]
+modulate = Color(0.764286, 0, 0.0491592, 1)
+scale = Vector2(105.127, 105.127)
+mesh = SubResource("SphereMesh_lldgc")
+
+[node name="Area2D" type="Area2D" parent="Enemy" groups=["DamagePlayer"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D"]
+scale = Vector2(5.32855, 5.32855)
+shape = SubResource("CircleShape2D_lldgc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="area_entered" from="Enemy/Area2D" to="Enemy" method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

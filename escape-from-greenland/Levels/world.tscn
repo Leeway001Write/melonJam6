@@ -1,35 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=7 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_kycxd"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_pa6j6"]
-[ext_resource type="PackedScene" uid="uid://boaxflxn4ts0a" path="res://Prefabs/enemy.tscn" id="4_4dvsh"]
-[ext_resource type="PackedScene" uid="uid://bvx2yw0dxqd2i" path="res://Prefabs/asteroid.tscn" id="5_ks8n1"]
+[ext_resource type="PackedScene" uid="uid://rk3w2tikjskl" path="res://Prefabs/charging-enemy.tscn" id="4_4dvsh"]
+[ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="5_ks8n1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
 
 [node name="World" type="Node2D"]
-
-[node name="Asteroid" parent="." instance=ExtResource("5_ks8n1")]
-position = Vector2(1217, 443)
 
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
 position = Vector2(571, 81)
 
-[node name="Booster" parent="." instance=ExtResource("2_kycxd")]
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Booster" parent="Items" instance=ExtResource("2_kycxd")]
 position = Vector2(645, 224)
 rotation = 1.67462
 
-[node name="Booster2" parent="." instance=ExtResource("2_kycxd")]
+[node name="Booster2" parent="Items" instance=ExtResource("2_kycxd")]
 position = Vector2(732, -273)
 rotation = -0.108523
 
-[node name="Booster3" parent="." instance=ExtResource("2_kycxd")]
+[node name="Booster3" parent="Items" instance=ExtResource("2_kycxd")]
 position = Vector2(74, -315)
-rotation = 4.8862
+rotation = -1.39699
 
-[node name="Gun" parent="." instance=ExtResource("3_pa6j6")]
+[node name="Gun" parent="Items" instance=ExtResource("3_pa6j6")]
 position = Vector2(106, -89)
 rotation = 1.18919
 
-[node name="Enemy" parent="." instance=ExtResource("4_4dvsh")]
-position = Vector2(-252, -142)
-rotation = 0.306738
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Backdrop" type="MeshInstance2D" parent="Backgrounds"]
+modulate = Color(0.0283017, 0.0283017, 0.0283017, 1)
+z_index = -99
+position = Vector2(571, 81)
+scale = Vector2(41818.7, 17565.5)
+mesh = SubResource("QuadMesh_4dvsh")
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="ChargingEnemy" parent="Enemies" instance=ExtResource("4_4dvsh")]
+position = Vector2(-377, 0)
+
+[node name="PathEnemy" parent="." instance=ExtResource("5_ks8n1")]
+position = Vector2(1137, 135)
