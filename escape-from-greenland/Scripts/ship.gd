@@ -24,8 +24,9 @@ func _attach_item(component: Component, area: Area2D):
 	if component.attached:
 		return
 	
-	component.hit_something.connect(_attach_item)
-	component.attached = true
-	
+	if not component.hit_something.is_connected(_attach_item):
+		component.hit_something.connect(_attach_item)
 	if area.is_in_group('Booster'):
 		component.reparent.call_deferred($Components/Boosters)
+	await get_tree().process_frame
+	component.attached = true

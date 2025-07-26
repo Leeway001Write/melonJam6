@@ -8,18 +8,19 @@ class_name Component
 var attached_items=[]
 signal hit_something
 
-func _ready() -> void:
-	if attached:
-		trigger.get_child(0).disabled = true
-
-func _process(delta: float) -> void:
-	
-	if attached:
-		trigger.get_child(0).disabled = true
+#func _ready() -> void:
+	#if attached:
+		#trigger.get_child(0).disabled = true
+#
+#func _process(delta: float) -> void:
+	#
+	#if attached:
+		#trigger.get_child(0).disabled = true
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	if !attached:
+	if not attached:
 		return
+	print_debug(area.get_parent().name)
 	if area.is_in_group("Component"):
 		var component = area.get_parent()
 		hit_something.emit(component, area)
