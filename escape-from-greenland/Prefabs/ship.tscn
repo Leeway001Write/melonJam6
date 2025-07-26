@@ -28,7 +28,6 @@ shape = SubResource("CircleShape2D_2wqeq")
 
 [node name="Booster1" parent="Components/Boosters" instance=ExtResource("1_7nyfi")]
 position = Vector2(0, -71)
-attached = true
 
 [node name="ForwardPos" type="Node2D" parent="."]
 position = Vector2(0, 9)

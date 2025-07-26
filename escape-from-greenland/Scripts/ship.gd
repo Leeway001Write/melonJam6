@@ -18,9 +18,14 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group('Component'):
-		var component:Component = area.get_parent()
-		if component.attached:
-			return
-		if area.is_in_group('Booster'):
-			component.reparent.call_deferred($Components/Boosters)
-			component.attached = true
+		_attach_item(area.get_parent(), area)
+
+func _attach_item(component: Component, area: Area2D):
+	if component.attached:
+		return
+	
+	component.hit_something.connect(_attach_item)
+	component.attached = true
+	
+	if area.is_in_group('Booster'):
+		component.reparent.call_deferred($Components/Boosters)
