@@ -5,15 +5,15 @@
 
 [node name="ShipJunk2" instance=ExtResource("1_gyps2")]
 
-[node name="Area2D" parent="." index="0"]
-scale = Vector2(1.60028, 1.60028)
-
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-scale = Vector2(3.03021, 1.86759)
-
-[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 rotation = -0.0115925
 scale = Vector2(0.184946, 0.184946)
 texture = ExtResource("2_7x6c4")
 region_enabled = true
 region_rect = Rect2(884, 1088, 507, 458)
+
+[node name="Area2D" parent="." index="1"]
+scale = Vector2(1.60028, 1.60028)
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+scale = Vector2(3.03021, 1.86759)

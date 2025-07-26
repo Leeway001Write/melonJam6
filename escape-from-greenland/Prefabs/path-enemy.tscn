@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bn1lygxg8oxdq"]
+[gd_scene load_steps=8 format=3 uid="uid://bn1lygxg8oxdq"]
 
 [ext_resource type="Script" uid="uid://nhaxthi3vtxm" path="res://Scripts/flying-enemy.gd" id="1_kegwy"]
 [ext_resource type="Script" uid="uid://cwrywos85w8re" path="res://Scripts/path-enemy-control.gd" id="1_lldgc"]
+[ext_resource type="Texture2D" uid="uid://bsv24mrsvefyw" path="res://Art/enemy/path-enemy.png" id="3_27qj8"]
 
 [sub_resource type="Curve2D" id="Curve2D_lldgc"]
 _data = {
@@ -9,9 +10,15 @@ _data = {
 }
 point_count = 9
 
-[sub_resource type="SphereMesh" id="SphereMesh_lldgc"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q2avr"]
+radius = 9.19609
+height = 30.6536
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lldgc"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fmfi6"]
+size = Vector2(140, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovwhs"]
+size = Vector2(53, 90)
 
 [node name="PathEnemy" type="Path2D"]
 curve = SubResource("Curve2D_lldgc")
@@ -25,19 +32,36 @@ position = Vector2(-5, 688)
 rotation = -1.25918
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
+rotation = -4.71238
+scale = Vector2(1.19186, 1.19186)
 script = ExtResource("1_kegwy")
 health = 3
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Enemy"]
-modulate = Color(0.764286, 0, 0.0491592, 1)
-scale = Vector2(105.127, 105.127)
-mesh = SubResource("SphereMesh_lldgc")
+[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
+position = Vector2(0, -6)
+scale = Vector2(0.258281, 0.258281)
+texture = ExtResource("3_27qj8")
+region_enabled = true
+region_rect = Rect2(891, 160, 1010, 860)
 
 [node name="Area2D" type="Area2D" parent="Enemy" groups=["DamagePlayer"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Area2D"]
-scale = Vector2(5.32855, 5.32855)
-shape = SubResource("CircleShape2D_lldgc")
+[node name="CollisionShape2DMain" type="CollisionShape2D" parent="Enemy/Area2D"]
+position = Vector2(0, -11)
+scale = Vector2(12.9855, 2.39804)
+shape = SubResource("CapsuleShape2D_q2avr")
+
+[node name="CollisionShape2DBack" type="CollisionShape2D" parent="Enemy/Area2D"]
+position = Vector2(1, -70)
+shape = SubResource("RectangleShape2D_fmfi6")
+
+[node name="CollisionShape2DLeftGun" type="CollisionShape2D" parent="Enemy/Area2D"]
+position = Vector2(-80, 49)
+shape = SubResource("RectangleShape2D_ovwhs")
+
+[node name="CollisionShape2DRightGun2" type="CollisionShape2D" parent="Enemy/Area2D"]
+position = Vector2(86, 51)
+shape = SubResource("RectangleShape2D_ovwhs")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
