@@ -18,9 +18,11 @@ config/icon="res://icon.svg"
 [global_group]
 
 Booster=""
-Component=""
 Gun=""
+Piece=""
+Component=""
 Player=""
+DamagePlayer=""
 
 [input]
 

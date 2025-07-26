@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=6 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_kycxd"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_pa6j6"]
 [ext_resource type="PackedScene" uid="uid://boaxflxn4ts0a" path="res://Prefabs/enemy.tscn" id="4_4dvsh"]
+[ext_resource type="PackedScene" uid="uid://bvx2yw0dxqd2i" path="res://Prefabs/asteroid.tscn" id="5_ks8n1"]
 
 [node name="World" type="Node2D"]
+
+[node name="Asteroid" parent="." instance=ExtResource("5_ks8n1")]
+position = Vector2(1217, 443)
 
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
 position = Vector2(571, 81)
