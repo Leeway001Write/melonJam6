@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://6t48r1sfmkgl"]
+[gd_scene load_steps=14 format=3 uid="uid://6t48r1sfmkgl"]
 
 [ext_resource type="Script" uid="uid://cnsnk4cq5axtw" path="res://Scripts/booster.gd" id="1_6tacm"]
 [ext_resource type="Texture2D" uid="uid://ogdt681y3uvf" path="res://Art/components/booster.png" id="2_0ajaq"]
@@ -6,6 +6,14 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfkkc"]
 size = Vector2(12.4701, 20)
+
+[sub_resource type="Curve" id="Curve_f1h7d"]
+_data = [Vector2(0, 1), 0.0, 1.4, 0, 0, Vector2(0.208145, 0.977358), 0.0, 0.0, 0, 0, Vector2(0.58371, 0.969811), 0.0, 0.0, 0, 0, Vector2(0.701357, 0.977358), 0.0, 0.0, 0, 0, Vector2(1, 0.0339622), -12.6762, -0.089353, 0, 0]
+point_count = 5
+
+[sub_resource type="Gradient" id="Gradient_8wo6y"]
+offsets = PackedFloat32Array(0, 0.136612, 0.551913, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0.992157, 0.545098, 1, 0, 0.990903, 0.544234, 1, 0.0359995, 0.291225, 0.580953, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8wo6y"]
 atlas = ExtResource("3_f1h7d")
@@ -83,14 +91,23 @@ position = Vector2(0, 9)
 position = Vector2(0, -40)
 emitting = false
 amount = 80
+lifetime = 2.38
+lifetime_randomness = 0.43
 direction = Vector2(0, -1)
+spread = 20.91
 gravity = Vector2(0, 0)
 initial_velocity_min = 953.21
 initial_velocity_max = 953.21
+damping_min = 100.0
+damping_max = 100.0
 angle_min = -720.0
-scale_amount_min = 12.7
-scale_amount_max = 12.7
-color = Color(0.51, 1, 0.5345, 0.556863)
+scale_amount_min = 0.0
+scale_amount_max = 75.69
+scale_amount_curve = SubResource("Curve_f1h7d")
+color = Color(0.909526, 0.834001, 1, 0.556863)
+color_ramp = SubResource("Gradient_8wo6y")
+hue_variation_min = 1.0
+hue_variation_max = 1.0
 
 [node name="Fire" type="AnimatedSprite2D" parent="."]
 z_index = -1
