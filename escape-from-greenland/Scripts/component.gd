@@ -7,9 +7,9 @@ class_name Component
 
 func _ready() -> void:
 	if attached:
-		trigger.monitorable = false
+		trigger.get_child(0).disabled = true
 
 func _process(delta: float) -> void:
 	
 	if attached:
-		trigger.monitorable = false
+		trigger.get_child(0).disabled = true

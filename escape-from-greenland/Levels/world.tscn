@@ -6,7 +6,8 @@
 [node name="World" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
-position = Vector2(571, 323)
+position = Vector2(571, 81)
 
 [node name="Booster" parent="." instance=ExtResource("2_kycxd")]
-position = Vector2(743, 542)
+position = Vector2(645, 224)
+rotation = 1.67462
