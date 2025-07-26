@@ -4,13 +4,17 @@ extends CharacterBody2D
 
 #var speed:float = 0
 var song_comp_total = 0
+var move_vector = Vector2.ZERO
 
 func _physics_process(delta: float) -> void:
+	move_vector = Vector2.ZERO # Reinitialize it
 	if Input.is_action_pressed('forward'):
 		for booster:Booster in $Components/Boosters.get_children():
-			velocity += booster.dir_vector
-	
+			move_vector += booster.dir_vector
+	velocity += move_vector
 	velocity /= 1.01
+	
+	$Arrow.rotation = atan2(move_vector.y, move_vector.x)
 	
 	#var dir = Vector2($ForwardPos.global_position - global_position).normalized()
 	

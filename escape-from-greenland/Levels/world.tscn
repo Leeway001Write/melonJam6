@@ -7,7 +7,6 @@
 [node name="World" type="Node2D"]
 
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
-scale = Vector2(0.871134, 0.726322)
 
 [node name="Backdrop" type="MeshInstance2D" parent="Ship"]
 modulate = Color(0.0283017, 0.0283017, 0.0283017, 1)

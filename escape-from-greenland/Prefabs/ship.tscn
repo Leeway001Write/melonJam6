@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://gjus2b6qt6k1"]
+[gd_scene load_steps=19 format=3 uid="uid://gjus2b6qt6k1"]
 
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="1_7nyfi"]
 [ext_resource type="Script" uid="uid://ravio3b5trcs" path="res://Scripts/ship.gd" id="1_ba1si"]
@@ -55,6 +55,8 @@ _data = {
 &"Idle": SubResource("Animation_cm1ru"),
 &"Shake": SubResource("Animation_ba1si")
 }
+
+[sub_resource type="PrismMesh" id="PrismMesh_o8k4e"]
 
 [node name="Ship" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ba1si")
@@ -149,5 +151,13 @@ stream = ExtResource("11_7cayt")
 volume_db = -80.0
 autoplay = true
 parameters/looping = true
+
+[node name="Arrow" type="Node2D" parent="."]
+modulate = Color(0.47451, 0.643137, 0.258824, 1)
+
+[node name="ArrowSprite" type="MeshInstance2D" parent="Arrow"]
+position = Vector2(0, 126)
+scale = Vector2(21.6905, 21.6905)
+mesh = SubResource("PrismMesh_o8k4e")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

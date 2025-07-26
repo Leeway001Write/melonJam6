@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://run54ss7343y"]
+
+[ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_v0bsi"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Ship" parent="." instance=ExtResource("1_v0bsi")]
