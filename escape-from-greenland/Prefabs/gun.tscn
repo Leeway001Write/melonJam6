@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccrjlto8qhso5"]
+
+[ext_resource type="Script" uid="uid://c4axdlq755jib" path="res://Scripts/gun.gd" id="1_3se71"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_epwho"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epwho"]
+size = Vector2(20.8601, 18.2437)
+
+[node name="Gun" type="CharacterBody2D"]
+script = ExtResource("1_3se71")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(27.2546, 99.7855)
+mesh = SubResource("QuadMesh_epwho")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="."]
+modulate = Color(0, 0, 0.129412, 1)
+position = Vector2(0, 43.9464)
+scale = Vector2(27.2546, 11.8928)
+mesh = SubResource("QuadMesh_epwho")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.2464, 5.37172)
+shape = SubResource("RectangleShape2D_epwho")
