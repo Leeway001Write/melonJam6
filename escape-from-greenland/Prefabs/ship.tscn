@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="1_7nyfi"]
 [ext_resource type="Script" uid="uid://ravio3b5trcs" path="res://Scripts/ship.gd" id="1_ba1si"]
-[ext_resource type="Script" uid="uid://b60p6twlgbibh" path="res://Scripts/camera_2d.gd" id="3_ba1si"]
+[ext_resource type="Texture2D" uid="uid://dnpowfsmtqavu" path="res://Art/player/player-ship.png" id="2_dpy1d"]
+[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="3_ba1si"]
 [ext_resource type="AudioStream" uid="uid://dvn3u3xfw15j8" path="res://Sound/Music/1 hi hat.mp3" id="4_cm1ru"]
 [ext_resource type="AudioStream" uid="uid://e2t0qm2423gb" path="res://Sound/Music/2 kick and snare.mp3" id="5_o8k4e"]
 [ext_resource type="AudioStream" uid="uid://mefp7jcr4c6r" path="res://Sound/Music/3 bass.mp3" id="6_dpy1d"]
@@ -11,8 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://c0m0os5gicw6v" path="res://Sound/Music/6 clarinet.mp3" id="9_c2nu4"]
 [ext_resource type="AudioStream" uid="uid://b3k5uokgby226" path="res://Sound/Music/7 flute.mp3" id="10_uc7nm"]
 [ext_resource type="AudioStream" uid="uid://b6xlppit0juoj" path="res://Sound/Music/8 brass.mp3" id="11_7cayt"]
-
-[sub_resource type="SphereMesh" id="SphereMesh_2wqeq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wqeq"]
 
@@ -62,9 +61,14 @@ _data = {
 script = ExtResource("1_ba1si")
 turn_speed = 5.0
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-scale = Vector2(114.22, 114.22)
-mesh = SubResource("SphereMesh_2wqeq")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(3, -1)
+rotation = -0.0491019
+scale = Vector2(-0.191657, -0.191657)
+texture = ExtResource("2_dpy1d")
+region_enabled = true
+region_rect = Rect2(169, 304, 677, 647)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(5.63639, 5.63639)

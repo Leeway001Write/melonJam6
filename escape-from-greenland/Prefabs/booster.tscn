@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://6t48r1sfmkgl"]
 
 [ext_resource type="Script" uid="uid://cnsnk4cq5axtw" path="res://Scripts/booster.gd" id="1_6tacm"]
-
-[sub_resource type="PrismMesh" id="PrismMesh_im8oi"]
+[ext_resource type="Texture2D" uid="uid://ogdt681y3uvf" path="res://Art/components/booster.png" id="2_0ajaq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfkkc"]
 size = Vector2(12.4701, 20)
@@ -12,9 +11,13 @@ script = ExtResource("1_6tacm")
 speed = 2.0
 health = 3
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-scale = Vector2(74.1493, 74.1493)
-mesh = SubResource("PrismMesh_im8oi")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 7)
+rotation = 3.14159
+scale = Vector2(0.192752, 0.192752)
+texture = ExtResource("2_0ajaq")
+region_enabled = true
+region_rect = Rect2(991, 1798, 523, 485)
 
 [node name="Area2D" type="Area2D" parent="." groups=["Booster", "Component"]]
 

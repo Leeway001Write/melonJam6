@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=21 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="Texture2D" uid="uid://pqyap8wjxwus" path="res://Art/backgrounds/health-planet.png" id="2_v0p3n"]
@@ -17,6 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://b8hh5enqwc65x" path="res://Art/backgrounds/yellow-orange/orange4.png" id="11_43wwi"]
 [ext_resource type="Texture2D" uid="uid://c1gobeoeddtrl" path="res://Art/backgrounds/blue-green/green3.png" id="11_44brb"]
 [ext_resource type="Texture2D" uid="uid://cbvvh5y3dlqqw" path="res://Art/backgrounds/yellow-orange/yellow1.png" id="12_gtojq"]
+[ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="18_oyb16"]
+[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="19_43wwi"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
 
@@ -209,6 +211,41 @@ texture = ExtResource("11_44brb")
 [node name="Enemies" type="Node2D" parent="Q5"]
 
 [node name="Items" type="Node2D" parent="Q5"]
+
+[node name="Booster" parent="Q5/Items" instance=ExtResource("18_oyb16")]
+position = Vector2(-743, -611)
+
+[node name="Booster2" parent="Q5/Items" instance=ExtResource("18_oyb16")]
+position = Vector2(760, -401)
+rotation = -0.659456
+
+[node name="Booster3" parent="Q5/Items" instance=ExtResource("18_oyb16")]
+position = Vector2(-896, 185)
+rotation = 0.746696
+
+[node name="Booster4" parent="Q5/Items" instance=ExtResource("18_oyb16")]
+position = Vector2(742, 559)
+rotation = -0.503483
+
+[node name="Booster5" parent="Q5/Items" instance=ExtResource("18_oyb16")]
+position = Vector2(-439, 774)
+rotation = -2.17991
+
+[node name="Gun" parent="Q5/Items" instance=ExtResource("19_43wwi")]
+position = Vector2(1157, 231)
+rotation = 0.415374
+
+[node name="Gun2" parent="Q5/Items" instance=ExtResource("19_43wwi")]
+position = Vector2(-867, -274)
+rotation = -2.64943
+
+[node name="Gun3" parent="Q5/Items" instance=ExtResource("19_43wwi")]
+position = Vector2(-881, 649)
+rotation = -1.07841
+
+[node name="Gun4" parent="Q5/Items" instance=ExtResource("19_43wwi")]
+position = Vector2(118, -589)
+rotation = -2.47598
 
 [node name="Asteroids" type="Node2D" parent="Q5"]
 
