@@ -46,6 +46,10 @@ func _hurt():
 	if invincible: return
 	health -= 1
 	if health <= 0:
+		Engine.time_scale = .01
+		await get_tree().create_timer(.013).timeout
+		Engine.time_scale = 1
+		get_tree().get_first_node_in_group('Cam').shake()
 		destroy()
 
 func invincibility():

@@ -18,4 +18,5 @@ mesh = SubResource("SphereMesh_7dga7")
 [node name="Area2D" type="Area2D" parent="." groups=["PlayerBullet"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(2.92843, 2.92843)
 shape = SubResource("CircleShape2D_0oen4")

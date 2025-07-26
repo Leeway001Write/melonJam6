@@ -16,6 +16,7 @@ func _on_area_entered(area:Area2D):
 		
 func _hurt():
 	health -= 1
+	
 	if health <= 0:
 		_die()
 		
