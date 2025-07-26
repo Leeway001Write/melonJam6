@@ -23,6 +23,8 @@ func _physics_process(delta: float) -> void:
 	var enemy_dist = sqrt(((enemy_ship.global_position.x - player.global_position.x) ** 2.0) + ((enemy_ship.global_position.y - player.global_position.y) ** 2.0))
 	firing = enemy_dist < max_dist
 	
+	enemy_ship.look_at(player.global_position)
+	
 
 
 
