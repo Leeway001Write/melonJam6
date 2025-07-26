@@ -25,3 +25,11 @@ mesh = SubResource("QuadMesh_epwho")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(1.2464, 5.37172)
 shape = SubResource("RectangleShape2D_epwho")
+
+[node name="ForwardPos" type="Node2D" parent="."]
+position = Vector2(0, 46)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
