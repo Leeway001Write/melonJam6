@@ -28,5 +28,7 @@ func _attach_item(component: Component, area: Area2D):
 		component.hit_something.connect(_attach_item)
 	if area.is_in_group('Booster'):
 		component.reparent.call_deferred($Components/Boosters)
+	if area.is_in_group('Gun'):
+		component.reparent.call_deferred($Components/Guns)
 	await get_tree().process_frame
 	component.attached = true

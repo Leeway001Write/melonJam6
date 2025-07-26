@@ -20,7 +20,7 @@ position = Vector2(0, 43.9464)
 scale = Vector2(27.2546, 11.8928)
 mesh = SubResource("QuadMesh_epwho")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["Component", "Gun"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 scale = Vector2(1.2464, 5.37172)
@@ -32,4 +32,5 @@ position = Vector2(0, 46)
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

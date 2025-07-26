@@ -24,6 +24,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		var component:Component = area.get_parent()
 		if component.attached:
 			if not component.destroyed.is_connected(destroy):
+				print_debug("I'm Attaching now")
 				component.destroyed.connect(destroy)
 		if not attached:
 			return

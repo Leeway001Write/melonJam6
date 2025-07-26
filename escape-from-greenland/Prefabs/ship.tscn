@@ -30,6 +30,8 @@ shape = SubResource("CircleShape2D_2wqeq")
 position = Vector2(0, -71)
 test = true
 
+[node name="Guns" type="Node2D" parent="Components"]
+
 [node name="ForwardPos" type="Node2D" parent="."]
 position = Vector2(0, 9)
 

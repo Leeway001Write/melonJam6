@@ -14,12 +14,10 @@ position = Vector2(645, 224)
 rotation = 1.67462
 
 [node name="Booster2" parent="." instance=ExtResource("2_kycxd")]
-visible = false
 position = Vector2(732, -273)
 rotation = -0.108523
 
 [node name="Booster3" parent="." instance=ExtResource("2_kycxd")]
-visible = false
 position = Vector2(74, -315)
 rotation = 4.8862
 
