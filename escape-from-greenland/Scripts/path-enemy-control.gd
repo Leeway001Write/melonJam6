@@ -7,7 +7,7 @@ extends Path2D
 @onready var path_follow = $PathFollow2D
 @onready var enemy_ship = $Enemy
 @onready var player:CharacterBody2D = get_tree().get_first_node_in_group('Player')
-@onready var bullet = preload("res://Prefabs/bullet.tscn")
+@onready var bullet = preload("res://Prefabs/bullet-enemy.tscn")
 
 var firing = true
 

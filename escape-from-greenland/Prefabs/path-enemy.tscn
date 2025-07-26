@@ -32,19 +32,21 @@ position = Vector2(-5, 688)
 rotation = -1.25918
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
-rotation = -4.71238
+rotation = -6.28318
 scale = Vector2(1.19186, 1.19186)
 script = ExtResource("1_kegwy")
 health = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="Enemy"]
 position = Vector2(0, -6)
+rotation = 4.71238
 scale = Vector2(0.258281, 0.258281)
 texture = ExtResource("3_27qj8")
 region_enabled = true
 region_rect = Rect2(891, 160, 1010, 860)
 
 [node name="Area2D" type="Area2D" parent="Enemy" groups=["DamagePlayer"]]
+rotation = 4.71238
 
 [node name="CollisionShape2DMain" type="CollisionShape2D" parent="Enemy/Area2D"]
 position = Vector2(0, -11)
