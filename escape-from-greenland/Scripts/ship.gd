@@ -28,6 +28,7 @@ func _attach_item(component: Component, area: Area2D):
 	
 	if not component.hit_something.is_connected(_attach_item):
 		component.hit_something.connect(_attach_item)
+	component.invincibility()
 	if area.is_in_group('Booster'):
 		component.reparent.call_deferred($Components/Boosters)
 	if area.is_in_group('Gun'):

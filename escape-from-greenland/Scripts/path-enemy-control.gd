@@ -11,7 +11,12 @@ extends Path2D
 
 var firing = true
 
+func _ready() -> void:
+	enemy_ship.died.connect(queue_free)
+
 func _physics_process(delta: float) -> void:
+	# Check if the enemy still exists. If not, destory itself
+	if not is_instance_valid(enemy_ship): queue_free()
 	path_follow.progress += speed
 	enemy_ship.global_position = path_follow.global_position
 	# Basically just the distance formula to see how far the player is

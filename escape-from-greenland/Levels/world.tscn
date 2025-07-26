@@ -13,6 +13,12 @@
 [node name="Ship" parent="." instance=ExtResource("1_kycxd")]
 position = Vector2(571, 81)
 
+[node name="Backdrop" type="MeshInstance2D" parent="Ship"]
+modulate = Color(0.0283017, 0.0283017, 0.0283017, 1)
+z_index = -99
+scale = Vector2(6354.16, 5170.86)
+mesh = SubResource("QuadMesh_4dvsh")
+
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Booster" parent="Items" instance=ExtResource("2_kycxd")]
@@ -32,13 +38,6 @@ position = Vector2(106, -89)
 rotation = 1.18919
 
 [node name="Backgrounds" type="Node2D" parent="."]
-
-[node name="Backdrop" type="MeshInstance2D" parent="Backgrounds"]
-modulate = Color(0.0283017, 0.0283017, 0.0283017, 1)
-z_index = -99
-position = Vector2(571, 81)
-scale = Vector2(41818.7, 17565.5)
-mesh = SubResource("QuadMesh_4dvsh")
 
 [node name="Enemies" type="Node2D" parent="."]
 

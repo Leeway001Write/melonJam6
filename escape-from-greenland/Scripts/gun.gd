@@ -9,6 +9,7 @@ var dir = Vector2.ZERO
 
 
 func _physics_process(delta: float) -> void:
+	super(delta)
 	# Get the direction the bullet fires
 	dir = Vector2($ForwardPos.global_position - global_position).normalized()
 
