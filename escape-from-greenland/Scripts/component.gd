@@ -41,6 +41,11 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		invincible = false
 	elif area.is_in_group("DamagePlayer") and attached:
 		_hurt()
+	elif area.is_in_group('Asteroid'):
+		_hurt()
+		_hurt()
+		_hurt()
+		_hurt()
 
 func _hurt():
 	if invincible: return

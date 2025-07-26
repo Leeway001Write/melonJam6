@@ -31,6 +31,7 @@ Player=""
 DamagePlayer=""
 PlayerBullet=""
 Cam=""
+Asteroid=""
 
 [input]
 

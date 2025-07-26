@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=8 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_kycxd"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_pa6j6"]
 [ext_resource type="PackedScene" uid="uid://rk3w2tikjskl" path="res://Prefabs/charging-enemy.tscn" id="4_4dvsh"]
 [ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="5_ks8n1"]
+[ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="6_x5oxt"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
 
@@ -62,3 +63,6 @@ position = Vector2(-377, 0)
 
 [node name="PathEnemy" parent="." instance=ExtResource("5_ks8n1")]
 position = Vector2(1137, 135)
+
+[node name="Asteroids" parent="." instance=ExtResource("6_x5oxt")]
+position = Vector2(1172, -297)
