@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=4 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_kycxd"]
+[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_pa6j6"]
 
 [node name="World" type="Node2D"]
 
@@ -13,9 +14,15 @@ position = Vector2(645, 224)
 rotation = 1.67462
 
 [node name="Booster2" parent="." instance=ExtResource("2_kycxd")]
+visible = false
 position = Vector2(732, -273)
 rotation = -0.108523
 
 [node name="Booster3" parent="." instance=ExtResource("2_kycxd")]
+visible = false
 position = Vector2(74, -315)
 rotation = 4.8862
+
+[node name="Gun" parent="." instance=ExtResource("3_pa6j6")]
+position = Vector2(106, -89)
+rotation = 1.18919
