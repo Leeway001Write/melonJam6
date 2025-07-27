@@ -59,6 +59,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		health += 10
 		if health > 50:
 			health = 50
+		hurt.emit(health)
 		area.get_parent().queue_free()
 
 func _attach_item(component: Component, area: Area2D):
