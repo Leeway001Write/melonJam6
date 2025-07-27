@@ -262,7 +262,7 @@ scale = Vector2(0.351033, 0.348989)
 [node name="Background" type="Node2D" parent="Art"]
 
 [node name="Sign 1" type="Sprite2D" parent="Art/Background"]
-z_index = -5
+z_index = -50
 position = Vector2(-1037, 274)
 scale = Vector2(0.481515, 0.481515)
 texture = ExtResource("10_31083")
@@ -290,7 +290,7 @@ scale = Vector2(1.66838, 2.87763)
 texture = ExtResource("11_c8umy")
 
 [node name="Sign 2" type="Sprite2D" parent="Art/Background"]
-z_index = -5
+z_index = -50
 position = Vector2(-621, -722)
 scale = Vector2(0.481515, 0.481515)
 texture = ExtResource("10_31083")
@@ -318,7 +318,7 @@ scale = Vector2(1.66838, 2.87763)
 texture = ExtResource("11_c8umy")
 
 [node name="Sign 3" type="Sprite2D" parent="Art/Background"]
-z_index = -5
+z_index = -50
 position = Vector2(707, 867)
 scale = Vector2(0.481515, 0.481515)
 texture = ExtResource("10_31083")
@@ -346,7 +346,7 @@ scale = Vector2(1.66838, 2.87763)
 texture = ExtResource("11_c8umy")
 
 [node name="Sign 4" type="Sprite2D" parent="Art/Background"]
-z_index = -5
+z_index = -50
 position = Vector2(823, -318)
 scale = Vector2(0.481515, 0.481515)
 texture = ExtResource("10_31083")

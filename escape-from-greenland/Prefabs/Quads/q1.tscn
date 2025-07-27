@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://lh1aa6atvlo5"]
+[gd_scene load_steps=15 format=3 uid="uid://lh1aa6atvlo5"]
 
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="1_fj4ej"]
-[ext_resource type="PackedScene" path="res://Prefabs/medkit.tscn" id="1_q4yju"]
+[ext_resource type="PackedScene" uid="uid://denns5wufrwr1" path="res://Prefabs/medkit.tscn" id="1_q4yju"]
 [ext_resource type="Texture2D" uid="uid://pqyap8wjxwus" path="res://Art/backgrounds/health-planet.png" id="2_q4yju"]
 [ext_resource type="Texture2D" uid="uid://b8hh5enqwc65x" path="res://Art/backgrounds/yellow-orange/orange4.png" id="3_1plm3"]
 [ext_resource type="Texture2D" uid="uid://c1gobeoeddtrl" path="res://Art/backgrounds/blue-green/green3.png" id="4_2v2nn"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cxc1c084anagj" path="res://Prefabs/junk/controller.tscn" id="8_xnifb"]
 [ext_resource type="PackedScene" uid="uid://brh3sg71u08ag" path="res://Prefabs/junk/fridge.tscn" id="9_lxnxn"]
 [ext_resource type="PackedScene" uid="uid://0utp0g5ro63y" path="res://Prefabs/junk/heart.tscn" id="10_0mqop"]
+[ext_resource type="PackedScene" uid="uid://c3xvawqsoufaa" path="res://Prefabs/junk/wall-e.tscn" id="10_hv6tb"]
 [ext_resource type="PackedScene" uid="uid://cka7ljsit01k7" path="res://Prefabs/junk/junk-component.tscn" id="11_k35l4"]
 [ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/junk/ship_junk_1.tscn" id="12_adtlx"]
 [ext_resource type="PackedScene" uid="uid://kapus6jy5k7d" path="res://Prefabs/junk/ship_junk_2.tscn" id="13_yeuny"]
@@ -55,6 +56,36 @@ position = Vector2(5852, -5142)
 
 [node name="Medkit12" parent="Items" instance=ExtResource("1_q4yju")]
 position = Vector2(4261, -4660)
+
+[node name="Medkit45" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(5227, -9237)
+
+[node name="Medkit50" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(14776, -668)
+
+[node name="Medkit53" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(15124, -9284)
+
+[node name="Medkit54" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(11655, -9284)
+
+[node name="Medkit55" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(7965, -9284)
+
+[node name="Medkit56" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(1867, -9347)
+
+[node name="Medkit57" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(2976, -9759)
+
+[node name="Medkit58" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(6603, -9997)
+
+[node name="Medkit59" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(8868, -9981)
+
+[node name="Medkit60" parent="Items" instance=ExtResource("1_q4yju")]
+position = Vector2(13129, -9981)
 
 [node name="Medkit13" parent="Items" instance=ExtResource("1_q4yju")]
 position = Vector2(2757, -4426)
@@ -221,27 +252,36 @@ position = Vector2(9936, -4484)
 [node name="ShipJunk11" parent="Items" instance=ExtResource("14_clebn")]
 position = Vector2(14525, -5149)
 
+[node name="Wall-E" parent="Items" instance=ExtResource("10_hv6tb")]
+position = Vector2(1716, -2993)
+
+[node name="Wall-E2" parent="Items" instance=ExtResource("10_hv6tb")]
+position = Vector2(5982, -7326)
+
+[node name="Wall-E3" parent="Items" instance=ExtResource("10_hv6tb")]
+position = Vector2(14127, -4554)
+
 [node name="Asteroids" type="Node2D" parent="."]
 
 [node name="Asteroid208" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(4066, -5415)
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid209" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(7378, -751)
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid210" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(774.001, -786)
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid212" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(419, -8833)
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid214" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(5967, -928)
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid215" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(7085, -559)
@@ -250,17 +290,17 @@ scale = Vector2(1.09251, 1.08615)
 [node name="Asteroid211" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(3907, -8082)
 rotation = 0.926016
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid213" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(7219, -3418)
 rotation = 0.926016
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid216" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(615.001, -3453)
 rotation = 0.926016
-scale = Vector2(0.290988, 0.289294)
+scale = Vector2(0.589837, 0.586403)
 
 [node name="Asteroid218" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(5808, -3595)
@@ -320,14 +360,6 @@ scale = Vector2(0.290988, 0.289294)
 position = Vector2(5188, -634)
 scale = Vector2(0.290988, 0.289294)
 
-[node name="Asteroid234" parent="Asteroids" instance=ExtResource("1_fj4ej")]
-position = Vector2(-1416, -669)
-scale = Vector2(0.290988, 0.289294)
-
-[node name="Asteroid235" parent="Asteroids" instance=ExtResource("1_fj4ej")]
-position = Vector2(-1771, -8716)
-scale = Vector2(0.290988, 0.289294)
-
 [node name="Asteroid236" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(3777, -811)
 scale = Vector2(0.290988, 0.289294)
@@ -343,11 +375,6 @@ scale = Vector2(0.290988, 0.289294)
 
 [node name="Asteroid239" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(5029, -3301)
-rotation = 0.926016
-scale = Vector2(0.290988, 0.289294)
-
-[node name="Asteroid240" parent="Asteroids" instance=ExtResource("1_fj4ej")]
-position = Vector2(-1575, -3336)
 rotation = 0.926016
 scale = Vector2(0.290988, 0.289294)
 
@@ -483,6 +510,50 @@ scale = Vector2(0.290988, 0.289294)
 [node name="Asteroid266" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(12351, -2968)
 scale = Vector2(1.09251, 1.08615)
+
+[node name="Asteroid270" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(17172, -1802)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid271" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(18352, -4236)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid272" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(17097, -6570)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid273" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(18477, -10259)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid274" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(15290, -12191)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid275" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(9091, -12191)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid276" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(10697, -13396)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid277" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(12730, -12944)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid278" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(910.002, -13596)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid279" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(3520, -12592)
+scale = Vector2(3.24718, 3.22827)
+
+[node name="Asteroid280" parent="Asteroids" instance=ExtResource("1_fj4ej")]
+position = Vector2(6030, -13972)
+scale = Vector2(3.24718, 3.22827)
 
 [node name="Asteroid267" parent="Asteroids" instance=ExtResource("1_fj4ej")]
 position = Vector2(12485, -5827)

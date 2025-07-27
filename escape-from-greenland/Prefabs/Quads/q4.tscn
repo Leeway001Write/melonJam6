@@ -597,7 +597,6 @@ scale = Vector2(1.90219, 1.90219)
 [node name="Art" type="Node2D" parent="."]
 
 [node name="Background" type="Node2D" parent="Art"]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Art/Background"]
 modulate = Color(1, 1, 1, 0.486275)
