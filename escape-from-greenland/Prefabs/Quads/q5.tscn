@@ -1,0 +1,249 @@
+[gd_scene load_steps=8 format=3 uid="uid://bk1chkf7q5ppn"]
+
+[ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="1_txyqp"]
+[ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_u7fam"]
+[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_jplls"]
+[ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/junk/ship_junk_1.tscn" id="4_31083"]
+[ext_resource type="PackedScene" uid="uid://kapus6jy5k7d" path="res://Prefabs/junk/ship_junk_2.tscn" id="5_c8umy"]
+[ext_resource type="PackedScene" uid="uid://ujyk5py8wvlf" path="res://Prefabs/junk/ship_junk_3.tscn" id="6_jn7km"]
+[ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="7_aebji"]
+
+[node name="Q5" type="Node2D"]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="PathEnemy" parent="Enemies" instance=ExtResource("1_txyqp")]
+position = Vector2(-658, -2897)
+rotation = 0.547803
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Booster" parent="Items" instance=ExtResource("2_u7fam")]
+position = Vector2(360, -14)
+
+[node name="Gun" parent="Items" instance=ExtResource("3_jplls")]
+position = Vector2(-395, -2)
+rotation = 0.415374
+
+[node name="ShipJunk1" parent="Items" instance=ExtResource("4_31083")]
+position = Vector2(592, -473)
+
+[node name="ShipJunk2" parent="Items" instance=ExtResource("5_c8umy")]
+position = Vector2(-1708, 787)
+
+[node name="ShipJunk3" parent="Items" instance=ExtResource("5_c8umy")]
+position = Vector2(-862, -819)
+
+[node name="ShipJunk4" parent="Items" instance=ExtResource("5_c8umy")]
+position = Vector2(906, 933)
+
+[node name="ShipJunk5" parent="Items" instance=ExtResource("5_c8umy")]
+position = Vector2(870, -1597)
+
+[node name="ShipJunk6" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(1181, 388)
+
+[node name="ShipJunk7" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(-1494, -615)
+
+[node name="ShipJunk8" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(-1139, 329)
+
+[node name="ShipJunk9" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(-503, -664)
+
+[node name="ShipJunk10" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(-744, 907)
+
+[node name="ShipJunk11" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(631, 1613)
+
+[node name="ShipJunk12" parent="Items" instance=ExtResource("6_jn7km")]
+position = Vector2(1692, -637)
+
+[node name="ShipJunk13" parent="Items" instance=ExtResource("4_31083")]
+position = Vector2(-388, 553)
+
+[node name="ShipJunk14" parent="Items" instance=ExtResource("4_31083")]
+position = Vector2(-2069, -957)
+
+[node name="ShipJunk15" parent="Items" instance=ExtResource("4_31083")]
+position = Vector2(-1204, 1238)
+
+[node name="ShipJunk16" parent="Items" instance=ExtResource("4_31083")]
+position = Vector2(1633, 773)
+
+[node name="ShipJunk17" parent="Items" instance=ExtResource("4_31083")]
+position = Vector2(985, -1003)
+
+[node name="Asteroids" type="Node2D" parent="."]
+
+[node name="Asteroid" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-695, 1167)
+
+[node name="Asteroid6" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1136, 7)
+
+[node name="Asteroid10" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1280, -177)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid11" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-536, 944)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid12" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(482, 1285)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid13" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1573, 113)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid14" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1589, -387)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid27" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1608, -166)
+scale = Vector2(0.806666, 0.806666)
+
+[node name="Asteroid28" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1771, 189)
+scale = Vector2(0.645692, 0.645692)
+
+[node name="Asteroid30" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1894, -36)
+scale = Vector2(0.645692, 0.645692)
+
+[node name="Asteroid41" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1840, 587)
+scale = Vector2(0.645692, 0.645692)
+
+[node name="Asteroid15" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(280, -1119)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid16" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-507, -942)
+scale = Vector2(0.626256, 0.626256)
+
+[node name="Asteroid17" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-670, -1083)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid22" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1678, -428)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid39" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1778, 396)
+scale = Vector2(0.462654, 0.462654)
+
+[node name="Asteroid56" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1956, -702)
+scale = Vector2(0.242266, 0.242266)
+
+[node name="Asteroid70" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(802, 1381)
+scale = Vector2(0.775201, 0.775201)
+
+[node name="Asteroid23" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(602, 1092)
+scale = Vector2(0.909926, 0.909926)
+
+[node name="Asteroid24" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-95, -1461)
+scale = Vector2(0.909926, 0.909926)
+
+[node name="Asteroid25" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-803, -1556)
+scale = Vector2(1.1239, 1.1239)
+
+[node name="Asteroid26" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(628, -1482)
+scale = Vector2(1.1239, 1.1239)
+
+[node name="Asteroid18" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-361, -1234)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid19" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(769, -1100)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid20" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1905, -675)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid29" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(197, -1289)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid31" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1087, -1794)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid73" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(151, 1573)
+scale = Vector2(0.42302, 0.42302)
+
+[node name="Asteroid62" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-880, 1466)
+scale = Vector2(0.7104, 0.7104)
+
+[node name="Asteroid21" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1524, -274)
+scale = Vector2(0.805101, 0.805101)
+
+[node name="Asteroid37" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1918, -469)
+scale = Vector2(1.09815, 1.09815)
+
+[node name="Asteroid38" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1884, -360)
+scale = Vector2(1.09815, 1.09815)
+
+[node name="Asteroid35" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1869, -93)
+scale = Vector2(0.637667, 0.637667)
+
+[node name="Asteroid36" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-2032, 190)
+scale = Vector2(0.637667, 0.637667)
+
+[node name="Asteroid7" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1946, 589)
+
+[node name="Asteroid8" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(507, -970)
+
+[node name="Asteroid9" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1515, 370)
+
+[node name="Asteroid42" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-313, 1573)
+
+[node name="Asteroid2" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(1218, 2)
+scale = Vector2(1.90686, 1.90686)
+
+[node name="Asteroid3" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1578, 254)
+scale = Vector2(2.13298, 2.13298)
+
+[node name="Asteroid4" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1, 974)
+scale = Vector2(3.02128, 3.02128)
+
+[node name="Asteroid5" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-31, -760)
+scale = Vector2(2.25057, 2.25057)
+
+[node name="Asteroid218" parent="Asteroids" instance=ExtResource("7_aebji")]
+position = Vector2(-1707, -165)
+scale = Vector2(0.351033, 0.348989)
+
+[node name="Art" type="Node2D" parent="."]
+
+[node name="Background" type="Node2D" parent="Art"]
