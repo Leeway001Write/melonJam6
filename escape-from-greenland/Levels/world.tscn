@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=34 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_ikoig"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="18_oyb16"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="19_43wwi"]
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="20_p3ug2"]
-[ext_resource type="PackedScene" uid="uid://denns5wufrwr1" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
+[ext_resource type="PackedScene" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
 [ext_resource type="Script" uid="uid://rpsbhilqwmsp" path="res://Scripts/score.gd" id="21_gtojq"]
 [ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="21_pr8ms"]
 
@@ -161,6 +161,8 @@ _data = {
 &"Idle": SubResource("Animation_pr8ms"),
 &"hurt": SubResource("Animation_d21qu")
 }
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_6m1pe"]
 
 [node name="World" type="Node2D"]
 
@@ -1665,3 +1667,34 @@ libraries = {
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.827281, 0.827281, 0.827281, 1)
+
+[node name="Boundry" type="Node2D" parent="."]
+
+[node name="1" type="StaticBody2D" parent="Boundry"]
+position = Vector2(0, 12269)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundry/1"]
+shape = SubResource("WorldBoundaryShape2D_6m1pe")
+
+[node name="2" type="StaticBody2D" parent="Boundry"]
+position = Vector2(21672, 0)
+rotation = -1.57079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundry/2"]
+position = Vector2(-0.000197693, -89)
+shape = SubResource("WorldBoundaryShape2D_6m1pe")
+
+[node name="3" type="StaticBody2D" parent="Boundry"]
+position = Vector2(0, -12187)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundry/3"]
+position = Vector2(-0.00079077, -178)
+shape = SubResource("WorldBoundaryShape2D_6m1pe")
+
+[node name="4" type="StaticBody2D" parent="Boundry"]
+position = Vector2(-17877, 0)
+rotation = -4.71238
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundry/4"]
+shape = SubResource("WorldBoundaryShape2D_6m1pe")
