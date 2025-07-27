@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var rot_range = Vector2(-1, 1) # Min and max rotation
+@export var rot_range = Vector2(-0.3, 0.3) # Min and max rotation
 
 @onready var rot_speed = randf_range(rot_range.x, rot_range.y)
 @onready var asteroid_sprites = [$Asteroid1, $Asteroid2, $Asteroid3]
