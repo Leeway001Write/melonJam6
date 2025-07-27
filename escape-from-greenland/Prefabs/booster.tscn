@@ -1,9 +1,12 @@
-[gd_scene load_steps=21 format=3 uid="uid://6t48r1sfmkgl"]
+[gd_scene load_steps=23 format=3 uid="uid://6t48r1sfmkgl"]
 
 [ext_resource type="Script" uid="uid://cnsnk4cq5axtw" path="res://Scripts/booster.gd" id="1_6tacm"]
 [ext_resource type="Texture2D" uid="uid://ogdt681y3uvf" path="res://Art/components/booster.png" id="2_0ajaq"]
 [ext_resource type="Texture2D" uid="uid://cv8yvno6exuy" path="res://Art/components/fire-burst-sprite-sheet.png" id="3_8wo6y"]
 [ext_resource type="Texture2D" uid="uid://ck4xadftooykx" path="res://Art/components/booster-fire-sprite-sheet.png" id="3_f1h7d"]
+[ext_resource type="Texture2D" uid="uid://dtsi86ifm8fag" path="res://Art/light-texture.png" id="5_182f1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_182f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfkkc"]
 size = Vector2(12.4701, 20)
@@ -121,6 +124,12 @@ script = ExtResource("1_6tacm")
 speed = 2.0
 health = 3
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(0.377379, 0.377379, 0.377379, 1)
+scale = Vector2(674, 674)
+mesh = SubResource("QuadMesh_182f1")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 7)
 rotation = 3.14159
@@ -167,5 +176,12 @@ rotation = -3.14159
 scale = Vector2(0.236809, 0.236809)
 sprite_frames = SubResource("SpriteFrames_74tug")
 animation = &"burst"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-2, -25)
+enabled = false
+energy = 1.64
+texture = ExtResource("5_182f1")
+texture_scale = 3.75
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

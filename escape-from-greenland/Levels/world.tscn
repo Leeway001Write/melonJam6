@@ -1,9 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=33 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_ikoig"]
 [ext_resource type="Texture2D" uid="uid://pqyap8wjxwus" path="res://Art/backgrounds/health-planet.png" id="2_v0p3n"]
 [ext_resource type="Texture2D" uid="uid://dga5sunif18bf" path="res://Art/backgrounds/pink-purple/pink1.png" id="2_x5oxt"]
+[ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/ship_junk_1.tscn" id="3_6m1pe"]
 [ext_resource type="Texture2D" uid="uid://bn57s67hq2t6x" path="res://Art/backgrounds/pink-purple/pink2.png" id="3_vqnaq"]
 [ext_resource type="Texture2D" uid="uid://cyndxbmuaxn10" path="res://Art/backgrounds/pink-purple/purple1.png" id="4_rljl1"]
 [ext_resource type="Texture2D" uid="uid://d07qj2h6dtkdf" path="res://Art/backgrounds/pink-purple/purple2.png" id="5_06jdw"]
@@ -210,6 +211,9 @@ scale = Vector2(0.242717, 0.241304)
 [node name="Asteroid215" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
 position = Vector2(7085, -559)
 scale = Vector2(0.911279, 0.905972)
+
+[node name="ShipJunk1" parent="Q1/Asteroids" instance=ExtResource("3_6m1pe")]
+position = Vector2(371, -249)
 
 [node name="Art" type="Node2D" parent="Q1"]
 
@@ -1658,3 +1662,6 @@ libraries = {
 libraries = {
 &"": SubResource("AnimationLibrary_6m1pe")
 }
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.827281, 0.827281, 0.827281, 1)
