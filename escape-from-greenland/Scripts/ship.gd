@@ -49,6 +49,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 				print("game over")
 				$AudioStreamPlayer2D.set_pitch_scale(0.5)
 				$AudioStreamPlayer2D.play(0)
+				get_tree().change_scene_to_file.call_deferred('res://Menus/gameOver.tscn')
 	
 	if area.is_in_group('Consumable'):
 		

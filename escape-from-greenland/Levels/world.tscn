@@ -1483,7 +1483,8 @@ texture = ExtResource("11_44brb")
 [node name="Enemies" type="Node2D" parent="Q5"]
 
 [node name="PathEnemy" parent="Q5/Enemies" instance=ExtResource("21_pr8ms")]
-position = Vector2(-3828, -653)
+position = Vector2(-692, -1350)
+rotation = 0.547803
 
 [node name="Items" type="Node2D" parent="Q5"]
 

@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Enemy
 
-@export var health:int
+@export var health:int = 10
 @export var max_player_dist = 1100
 @export var points:int = 15
 
