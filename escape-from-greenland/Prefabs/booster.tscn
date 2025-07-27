@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://6t48r1sfmkgl"]
+[gd_scene load_steps=24 format=3 uid="uid://6t48r1sfmkgl"]
 
 [ext_resource type="Script" uid="uid://cnsnk4cq5axtw" path="res://Scripts/booster.gd" id="1_6tacm"]
 [ext_resource type="Texture2D" uid="uid://ogdt681y3uvf" path="res://Art/components/booster.png" id="2_0ajaq"]
 [ext_resource type="Texture2D" uid="uid://cv8yvno6exuy" path="res://Art/components/fire-burst-sprite-sheet.png" id="3_8wo6y"]
 [ext_resource type="Texture2D" uid="uid://ck4xadftooykx" path="res://Art/components/booster-fire-sprite-sheet.png" id="3_f1h7d"]
+[ext_resource type="Texture2D" uid="uid://rsy8b76gvvow" path="res://Art/components/booster-modified.png" id="3_xca8e"]
 [ext_resource type="Texture2D" uid="uid://dtsi86ifm8fag" path="res://Art/light-texture.png" id="5_182f1"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_182f1"]
@@ -131,12 +132,21 @@ scale = Vector2(674, 674)
 mesh = SubResource("QuadMesh_182f1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, 7)
 rotation = 3.13674
 scale = Vector2(0.192752, 0.192752)
 texture = ExtResource("2_0ajaq")
 region_enabled = true
 region_rect = Rect2(991, 1798, 523, 485)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+rotation = 3.14159
+scale = Vector2(0.147189, 0.147189)
+texture = ExtResource("3_xca8e")
+region_enabled = true
+region_rect = Rect2(3119, 934, 646, 624)
 
 [node name="Area2D" type="Area2D" parent="." groups=["Booster", "Component"]]
 
