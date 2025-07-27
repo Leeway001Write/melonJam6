@@ -15,6 +15,7 @@ height = 38.6548
 script = ExtResource("1_ra6xg")
 speed = 1100.0
 health = 3
+max_player_dist = 2000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-17, 0)

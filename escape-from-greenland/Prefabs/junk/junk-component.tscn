@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://o2wqv4w0qqio"]
+[gd_scene load_steps=3 format=3 uid="uid://cka7ljsit01k7"]
 
 [ext_resource type="Script" uid="uid://cpd534xwxdjb8" path="res://Scripts/component.gd" id="1_2g848"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2g848"]
-size = Vector2(16.4976, 24.091)
+size = Vector2(13.6749, 22.7526)
 
 [node name="JunkComponent" type="CharacterBody2D"]
 z_index = -10

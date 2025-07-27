@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_ikoig"]
 [ext_resource type="Texture2D" uid="uid://pqyap8wjxwus" path="res://Art/backgrounds/health-planet.png" id="2_v0p3n"]
 [ext_resource type="Texture2D" uid="uid://dga5sunif18bf" path="res://Art/backgrounds/pink-purple/pink1.png" id="2_x5oxt"]
-[ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/ship_junk_1.tscn" id="3_6m1pe"]
+[ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/junk/ship_junk_1.tscn" id="3_6m1pe"]
 [ext_resource type="Texture2D" uid="uid://bn57s67hq2t6x" path="res://Art/backgrounds/pink-purple/pink2.png" id="3_vqnaq"]
 [ext_resource type="Texture2D" uid="uid://cyndxbmuaxn10" path="res://Art/backgrounds/pink-purple/purple1.png" id="4_rljl1"]
 [ext_resource type="Texture2D" uid="uid://d07qj2h6dtkdf" path="res://Art/backgrounds/pink-purple/purple2.png" id="5_06jdw"]
@@ -22,7 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="18_oyb16"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="19_43wwi"]
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="20_p3ug2"]
-[ext_resource type="PackedScene" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
+[ext_resource type="PackedScene" uid="uid://denns5wufrwr1" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
 [ext_resource type="Script" uid="uid://rpsbhilqwmsp" path="res://Scripts/score.gd" id="21_gtojq"]
 [ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="21_pr8ms"]
 

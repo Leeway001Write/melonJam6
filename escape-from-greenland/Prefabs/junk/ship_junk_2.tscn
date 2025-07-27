@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://kapus6jy5k7d"]
+[gd_scene load_steps=4 format=3 uid="uid://kapus6jy5k7d"]
 
-[ext_resource type="PackedScene" uid="uid://o2wqv4w0qqio" path="res://Prefabs/junk-component.tscn" id="1_gyps2"]
+[ext_resource type="PackedScene" uid="uid://cka7ljsit01k7" path="res://Prefabs/junk/junk-component.tscn" id="1_gyps2"]
 [ext_resource type="Texture2D" uid="uid://dnpowfsmtqavu" path="res://Art/player/player-ship.png" id="2_7x6c4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j4bml"]
+size = Vector2(17.3225, 24.7602)
 
 [node name="ShipJunk2" instance=ExtResource("1_gyps2")]
 
@@ -17,3 +20,4 @@ scale = Vector2(1.60028, 1.60028)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 scale = Vector2(3.03021, 1.86759)
+shape = SubResource("RectangleShape2D_j4bml")

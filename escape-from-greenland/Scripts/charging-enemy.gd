@@ -9,6 +9,9 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	super(delta)
+	if not activated:
+		charging = false
+	
 	if charging:
 		velocity = Vector2.RIGHT.rotated(rotation) * speed
 		move_and_slide()

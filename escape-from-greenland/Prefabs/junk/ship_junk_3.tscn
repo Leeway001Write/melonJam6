@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ujyk5py8wvlf"]
 
-[ext_resource type="PackedScene" uid="uid://o2wqv4w0qqio" path="res://Prefabs/junk-component.tscn" id="1_6dp4f"]
+[ext_resource type="PackedScene" uid="uid://cka7ljsit01k7" path="res://Prefabs/junk/junk-component.tscn" id="1_6dp4f"]
 [ext_resource type="Texture2D" uid="uid://dnpowfsmtqavu" path="res://Art/player/player-ship.png" id="2_o01a1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6dp4f"]

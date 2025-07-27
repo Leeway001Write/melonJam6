@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxc1c084anagj"]
+
+[ext_resource type="PackedScene" uid="uid://cka7ljsit01k7" path="res://Prefabs/junk/junk-component.tscn" id="1_wuqd8"]
+[ext_resource type="Texture2D" uid="uid://bh4pwxmq6e3f8" path="res://Art/components/junk/junk.png" id="2_rafqi"]
+
+[node name="Controller" instance=ExtResource("1_wuqd8")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+position = Vector2(3, 3)
+rotation = 0.388679
+scale = Vector2(0.269787, 0.269787)
+texture = ExtResource("2_rafqi")
+region_enabled = true
+region_rect = Rect2(1731, 663, 448, 342)
