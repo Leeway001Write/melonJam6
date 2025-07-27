@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=32 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_ikoig"]
@@ -98,6 +98,67 @@ tracks/2/keys = {
 _data = {
 &"Idle": SubResource("Animation_gtojq"),
 &"Score": SubResource("Animation_8mbvr")
+}
+
+[sub_resource type="Animation" id="Animation_pr8ms"]
+resource_name = "Idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Health:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Health:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d21qu"]
+resource_name = "hurt"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Health:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.206985, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.640765, 0.640765, 0.640765, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Health:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.211637, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 72), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6m1pe"]
+_data = {
+&"Idle": SubResource("Animation_pr8ms"),
+&"hurt": SubResource("Animation_d21qu")
 }
 
 [node name="World" type="Node2D"]
@@ -1573,7 +1634,27 @@ text = "Score: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Health" type="Node2D" parent="ScoreCont"]
+
+[node name="Health" type="RichTextLabel" parent="ScoreCont/Health" groups=["UI"]]
+modulate = Color(0.417172, 0, 0.0143706, 1)
+offset_left = -470.0
+offset_top = 313.0
+offset_right = 1536.0
+offset_bottom = 611.0
+scale = Vector2(0.467809, 0.467809)
+theme_override_fonts/normal_font = ExtResource("2_ikoig")
+theme_override_font_sizes/normal_font_size = 200
+text = "Health: 50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ScoreCont"]
 libraries = {
 &"": SubResource("AnimationLibrary_p3ug2")
+}
+
+[node name="HealthAnim" type="AnimationPlayer" parent="ScoreCont"]
+libraries = {
+&"": SubResource("AnimationLibrary_6m1pe")
 }

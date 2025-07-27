@@ -11,4 +11,4 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	rotate(deg_to_rad(rot_speed))
-	move_and_slide()
+	#move_and_slide()
