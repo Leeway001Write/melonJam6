@@ -11,6 +11,7 @@ class_name Component
 @onready var rot_speed = randf_range(rot_range.x, rot_range.y)
 
 var invincible = false
+var exploded = false
 
 signal hit_something
 signal destroyed
@@ -66,5 +67,7 @@ func invincibility():
 	invincible = false
 
 func destroy():
+	if exploded: return
 	destroyed.emit()
+	exploded = true
 	queue_free()
