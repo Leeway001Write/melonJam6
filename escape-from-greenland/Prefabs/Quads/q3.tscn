@@ -107,6 +107,98 @@ rotation = 0.616608
 position = Vector2(-7031, 816)
 rotation = -0.753501
 
+[node name="Gun24" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-17756, 1521)
+rotation = -0.753501
+
+[node name="Gun25" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-17756, 4577)
+rotation = -0.753501
+
+[node name="Gun26" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-17139, 3196)
+rotation = -0.753501
+
+[node name="Gun27" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-17139, 8838)
+rotation = -0.753501
+
+[node name="Gun28" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-18638, 8838)
+rotation = -0.753501
+
+[node name="Gun29" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-18565, 7075)
+rotation = -0.753501
+
+[node name="Gun30" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-16567, 12496)
+rotation = -0.753501
+
+[node name="Gun31" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-11146, 12731)
+rotation = -0.753501
+
+[node name="Gun32" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-7987, 12393)
+rotation = -0.753501
+
+[node name="Gun33" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-4035, 13216)
+rotation = -0.753501
+
+[node name="Gun34" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-2345, 10953)
+rotation = -0.753501
+
+[node name="Gun35" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-4725, 11967)
+rotation = -0.753501
+
+[node name="Gun36" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-8251, 14538)
+rotation = -0.753501
+
+[node name="Gun37" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-13996, 14185)
+rotation = -0.753501
+
+[node name="Gun38" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-13996, 13127)
+rotation = -0.753501
+
+[node name="Gun39" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-20828, 10100)
+rotation = -0.753501
+
+[node name="Gun40" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-18125, 10350)
+rotation = -0.753501
+
+[node name="Gun41" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-17361, 7177)
+rotation = -0.753501
+
+[node name="Gun42" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-19859, 5443)
+rotation = -0.753501
+
+[node name="Gun43" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-19066, 3460)
+rotation = -0.753501
+
+[node name="Gun44" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-17053, 757)
+rotation = -0.753501
+
+[node name="Gun46" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-19463, 1021)
+rotation = -0.753501
+
+[node name="Gun47" parent="Items/Guns" instance=ExtResource("1_nnv74")]
+position = Vector2(-20227, 8249)
+rotation = -0.753501
+
 [node name="Gun21" parent="Items/Guns" instance=ExtResource("1_nnv74")]
 position = Vector2(-4651, 8522)
 rotation = 2.09008
@@ -211,6 +303,38 @@ scale = Vector2(1.8102, 1.8102)
 position = Vector2(-6074, 6232)
 scale = Vector2(4.08133, 4.08133)
 
+[node name="Asteroid22" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-6367, 11948)
+scale = Vector2(4.08133, 4.08133)
+
+[node name="Asteroid116" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-12641, 11331)
+scale = Vector2(2.62242, 2.62242)
+
+[node name="Asteroid117" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-16990, 11316)
+scale = Vector2(4.08133, 4.08133)
+
+[node name="Asteroid118" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-18210, 5762)
+scale = Vector2(4.08133, 4.08133)
+
+[node name="Asteroid121" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-18592, 7774)
+scale = Vector2(2.50833, 2.50833)
+
+[node name="Asteroid130" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-18298, 2956)
+scale = Vector2(2.80627, 2.80627)
+
+[node name="Asteroid131" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-20017, 2030)
+scale = Vector2(4.08133, 4.08133)
+
+[node name="Asteroid135" parent="Asteroids" instance=ExtResource("3_adm1k")]
+position = Vector2(-1270, 11712)
+scale = Vector2(4.08133, 4.08133)
+
 [node name="Asteroid14" parent="Asteroids" instance=ExtResource("3_adm1k")]
 position = Vector2(-10069, 5338)
 scale = Vector2(4.08133, 4.08133)
@@ -289,10 +413,6 @@ scale = Vector2(2.25057, 2.25057)
 
 [node name="Asteroid174" parent="Asteroids" instance=ExtResource("3_adm1k")]
 position = Vector2(-9533, 10747)
-scale = Vector2(2.25057, 2.25057)
-
-[node name="Asteroid175" parent="Asteroids" instance=ExtResource("3_adm1k")]
-position = Vector2(-7083, -749.998)
 scale = Vector2(2.25057, 2.25057)
 
 [node name="Asteroid177" parent="Asteroids" instance=ExtResource("3_adm1k")]
@@ -776,7 +896,7 @@ position = Vector2(-16143, 6740)
 scale = Vector2(0.242717, 0.241304)
 
 [node name="Asteroid190" parent="Asteroids" instance=ExtResource("3_adm1k")]
-position = Vector2(-15280, 10431)
+position = Vector2(-14707, 10710)
 scale = Vector2(0.741925, 0.737604)
 
 [node name="Asteroid154" parent="Asteroids" instance=ExtResource("3_adm1k")]
