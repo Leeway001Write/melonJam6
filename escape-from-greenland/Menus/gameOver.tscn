@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7d23xsvv7ug"]
+
+[ext_resource type="Theme" uid="uid://dbwop227trwpa" path="res://Themes/menu_theme.tres" id="1_ghtbf"]
+[ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_5v0ck"]
+[ext_resource type="Script" uid="uid://bbfy6adsvi6gm" path="res://Menus/restart.gd" id="3_5v0ck"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3dyby"]
+font = ExtResource("2_5v0ck")
+font_size = 200
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ghtbf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1071.0
+rotation = 0.00466331
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 234.0
+offset_right = 220.0
+offset_bottom = 257.0
+scale = Vector2(1.13813, 1.13813)
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_3dyby")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 687.0
+offset_right = 1473.0
+offset_bottom = 943.0
+scale = Vector2(1.06777, 1.0265)
+theme = ExtResource("1_ghtbf")
+theme_override_fonts/font = ExtResource("2_5v0ck")
+text = "Relaunch"
+script = ExtResource("3_5v0ck")
