@@ -10,11 +10,16 @@ extends Path2D
 @onready var bullet = preload("res://Prefabs/bullet-enemy.tscn")
 
 var firing = true
+var enemy_dead = false
 
 func _ready() -> void:
-	enemy_ship.died.connect(queue_free)
+	enemy_ship.died.connect(_enemy_die)
+	
+func _enemy_die():
+	enemy_dead = true
 
 func _physics_process(delta: float) -> void:
+	if enemy_dead: return
 	# Check if the enemy still exists. If not, destory itself
 	if not is_instance_valid(enemy_ship): queue_free()
 	path_follow.progress += speed
@@ -29,6 +34,7 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
+	if enemy_dead: return
 	if firing:
 		var bullet_inst = bullet.instantiate()
 		bullet_inst.global_position = enemy_ship.global_position

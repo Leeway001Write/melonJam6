@@ -24,6 +24,9 @@ func _hurt():
 		
 func _die(): # Guess I'll die *shrug*
 	score_manager.increase_score(points)
+	$Sprite2D.play()
+	$Area2D.queue_free()
+	await get_tree().create_timer(.5).timeout
 	queue_free()
 	
 func _physics_process(delta: float) -> void:

@@ -1,14 +1,60 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn1lygxg8oxdq"]
+[gd_scene load_steps=14 format=3 uid="uid://bn1lygxg8oxdq"]
 
 [ext_resource type="Script" uid="uid://nhaxthi3vtxm" path="res://Scripts/flying-enemy.gd" id="1_kegwy"]
 [ext_resource type="Script" uid="uid://cwrywos85w8re" path="res://Scripts/path-enemy-control.gd" id="1_lldgc"]
-[ext_resource type="Texture2D" uid="uid://bsv24mrsvefyw" path="res://Art/enemy/path-enemy.png" id="3_27qj8"]
+[ext_resource type="Texture2D" uid="uid://cmvb0wpi01q58" path="res://Art/enemy/path-enemy-sprite-sheet.png" id="3_27qj8"]
 
 [sub_resource type="Curve2D" id="Curve2D_lldgc"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -5, 688, 0, 0, 0, 0, 148, 213, 0, 0, 0, 0, 878, 3, 0, 0, 0, 0, 158, -191, 0, 0, 0, 0, -7, -942, 0, 0, 0, 0, -178, -191, 0, 0, 0, 0, -1110, 0, 0, 0, 0, 0, -204, 208, 0, 0, 0, 0, -5, 688)
 }
 point_count = 9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2avr"]
+atlas = ExtResource("3_27qj8")
+region = Rect2(0, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmfi6"]
+atlas = ExtResource("3_27qj8")
+region = Rect2(1311, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovwhs"]
+atlas = ExtResource("3_27qj8")
+region = Rect2(2622, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47lrq"]
+atlas = ExtResource("3_27qj8")
+region = Rect2(3933, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qffm0"]
+atlas = ExtResource("3_27qj8")
+region = Rect2(5244, 0, 1311, 1309)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pq6jd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2avr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmfi6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovwhs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47lrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qffm0")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q2avr"]
 radius = 9.19609
@@ -37,13 +83,11 @@ scale = Vector2(1.19186, 1.19186)
 script = ExtResource("1_kegwy")
 health = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Enemy"]
-position = Vector2(0, -6)
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Enemy"]
+position = Vector2(-32.722, -5.99983)
 rotation = 4.71238
 scale = Vector2(0.258281, 0.258281)
-texture = ExtResource("3_27qj8")
-region_enabled = true
-region_rect = Rect2(891, 160, 1010, 860)
+sprite_frames = SubResource("SpriteFrames_pq6jd")
 
 [node name="Area2D" type="Area2D" parent="Enemy" groups=["DamagePlayer"]]
 rotation = 4.71238

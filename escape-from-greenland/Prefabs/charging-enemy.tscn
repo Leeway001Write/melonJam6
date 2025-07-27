@@ -1,7 +1,53 @@
-[gd_scene load_steps=6 format=3 uid="uid://rk3w2tikjskl"]
+[gd_scene load_steps=12 format=3 uid="uid://rk3w2tikjskl"]
 
 [ext_resource type="Script" uid="uid://dvig3630g5roh" path="res://Scripts/charging-enemy.gd" id="1_ra6xg"]
-[ext_resource type="Texture2D" uid="uid://7exld46eebqn" path="res://Art/enemy/charging-enemy.png" id="2_e1giq"]
+[ext_resource type="Texture2D" uid="uid://bwccteam40woq" path="res://Art/enemy/charging-enemy-sprite-sheet.png" id="2_e1giq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6iw22"]
+atlas = ExtResource("2_e1giq")
+region = Rect2(0, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq1us"]
+atlas = ExtResource("2_e1giq")
+region = Rect2(1311, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdk0p"]
+atlas = ExtResource("2_e1giq")
+region = Rect2(2622, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbjch"]
+atlas = ExtResource("2_e1giq")
+region = Rect2(3933, 0, 1311, 1309)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbpmr"]
+atlas = ExtResource("2_e1giq")
+region = Rect2(5244, 0, 1311, 1309)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ra6xg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6iw22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hq1us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdk0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbjch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbpmr")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="PrismMesh" id="PrismMesh_ra6xg"]
 
@@ -17,12 +63,10 @@ speed = 1100.0
 health = 3
 max_player_dist = 2000
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-17, 0)
-scale = Vector2(0.284872, 0.284872)
-texture = ExtResource("2_e1giq")
-region_enabled = true
-region_rect = Rect2(2, 127, 830, 848)
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-24, 23)
+scale = Vector2(0.252325, 0.252325)
+sprite_frames = SubResource("SpriteFrames_ra6xg")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 visible = false
