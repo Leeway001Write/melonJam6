@@ -1,4 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5k803o78b381"]
+[gd_scene load_steps=8 format=3 uid="uid://c5k803o78b381"]
+
+[ext_resource type="Script" uid="uid://chgig7tl2dci7" path="res://Scripts/asteroid.gd" id="1_3m15j"]
+[ext_resource type="Texture2D" uid="uid://dvhbxvp0urjq2" path="res://Art/asteroids/asteroid1.png" id="2_ah88h"]
+[ext_resource type="Texture2D" uid="uid://c1pvdt6f1mjkc" path="res://Art/asteroids/asteroid2.png" id="3_7mdu2"]
+[ext_resource type="Texture2D" uid="uid://byms6kk0get45" path="res://Art/asteroids/asteroid3.png" id="4_l8nqu"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_u0ett"]
 
@@ -7,8 +12,25 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_3m15j"]
 
 [node name="Asteroid" type="CharacterBody2D"]
+script = ExtResource("1_3m15j")
+
+[node name="Asteroid1" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.488461, 0.488461)
+texture = ExtResource("2_ah88h")
+
+[node name="Asteroid2" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.488461, 0.488461)
+texture = ExtResource("3_7mdu2")
+
+[node name="Asteroid3" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.488461, 0.488461)
+texture = ExtResource("4_l8nqu")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
 scale = Vector2(289.525, 289.525)
 mesh = SubResource("SphereMesh_u0ett")
 
