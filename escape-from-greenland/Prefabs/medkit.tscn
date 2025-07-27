@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://denns5wufrwr1"]
+
+[ext_resource type="Texture2D" uid="uid://7p1k1qft2ho1" path="res://Art/components/medkit.png" id="1_bq0v8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bq0v8"]
+size = Vector2(20, 20.6932)
+
+[node name="Medkit" type="Node2D" groups=["Consumable"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.284398, 0.284398)
+texture = ExtResource("1_bq0v8")
+region_enabled = true
+region_rect = Rect2(1011, 484, 401, 341)
+
+[node name="Area2D" type="Area2D" parent="." groups=["Consumable"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.39378)
+scale = Vector2(4.02124, 4.02124)
+shape = SubResource("RectangleShape2D_bq0v8")

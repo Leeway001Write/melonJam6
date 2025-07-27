@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://yueyhrgmxpo4"]
+[gd_scene load_steps=29 format=3 uid="uid://yueyhrgmxpo4"]
 
 [ext_resource type="PackedScene" uid="uid://gjus2b6qt6k1" path="res://Prefabs/ship.tscn" id="1_kycxd"]
 [ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="2_ikoig"]
@@ -21,7 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="18_oyb16"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="19_43wwi"]
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="20_p3ug2"]
+[ext_resource type="PackedScene" uid="uid://denns5wufrwr1" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
 [ext_resource type="Script" uid="uid://rpsbhilqwmsp" path="res://Scripts/score.gd" id="21_gtojq"]
+[ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="21_pr8ms"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_4dvsh"]
 
@@ -1488,7 +1490,13 @@ texture = ExtResource("11_44brb")
 
 [node name="Enemies" type="Node2D" parent="Q5"]
 
+[node name="PathEnemy" parent="Q5/Enemies" instance=ExtResource("21_pr8ms")]
+position = Vector2(-3828, -653)
+
 [node name="Items" type="Node2D" parent="Q5"]
+
+[node name="Medkit" parent="Q5/Items" instance=ExtResource("21_8mbvr")]
+position = Vector2(248, 489)
 
 [node name="Booster" parent="Q5/Items" instance=ExtResource("18_oyb16")]
 position = Vector2(-743, -611)

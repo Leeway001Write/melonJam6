@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var turn_speed:float = 12
+@export var health = 50
 
 #var speed:float = 0
 var song_comp_total = 0
@@ -38,6 +39,20 @@ func _process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group('Component'):
 		_attach_item(area.get_parent(), area)
+		
+	if area.is_in_group('DamagePlayer'):
+		if health > 0:
+			health -= 3
+			print(health)
+			if health <= 0:
+				print("game over")
+	
+	if area.is_in_group('Consumable'):
+		
+		health += 10
+		if health > 50:
+			health = 50
+		area.get_parent().queue_free()
 
 func _attach_item(component: Component, area: Area2D):
 	if component.attached:

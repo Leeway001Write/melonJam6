@@ -39,6 +39,7 @@ Asteroid=""
 Junk=""
 UI=""
 Score=""
+Consumable=""
 
 [input]
 

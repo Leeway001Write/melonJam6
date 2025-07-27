@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="1_7nyfi"]
 [ext_resource type="Script" uid="uid://ravio3b5trcs" path="res://Scripts/ship.gd" id="1_ba1si"]
 [ext_resource type="Texture2D" uid="uid://dnpowfsmtqavu" path="res://Art/player/player-ship.png" id="2_dpy1d"]
-[ext_resource type="Script" uid="uid://b60p6twlgbibh" path="res://Scripts/camera_2d.gd" id="3_ba1si"]
+[ext_resource type="Script" path="res://Scripts/camera_2d.gd" id="3_ba1si"]
 [ext_resource type="AudioStream" uid="uid://dvn3u3xfw15j8" path="res://Sound/Music/1 hi hat.mp3" id="4_cm1ru"]
 [ext_resource type="AudioStream" uid="uid://e2t0qm2423gb" path="res://Sound/Music/2 kick and snare.mp3" id="5_o8k4e"]
 [ext_resource type="AudioStream" uid="uid://mefp7jcr4c6r" path="res://Sound/Music/3 bass.mp3" id="6_dpy1d"]
