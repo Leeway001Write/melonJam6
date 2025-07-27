@@ -16,6 +16,7 @@ script = ExtResource("1_3m15j")
 
 [node name="Asteroid1" type="Sprite2D" parent="."]
 visible = false
+modulate = Color(0.87, 0.87, 0.87, 1)
 scale = Vector2(0.488461, 0.488461)
 texture = ExtResource("2_ah88h")
 
@@ -26,6 +27,7 @@ texture = ExtResource("3_7mdu2")
 
 [node name="Asteroid3" type="Sprite2D" parent="."]
 visible = false
+modulate = Color(0.54, 0.54, 0.54, 1)
 scale = Vector2(0.488461, 0.488461)
 texture = ExtResource("4_l8nqu")
 

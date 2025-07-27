@@ -132,7 +132,7 @@ mesh = SubResource("QuadMesh_182f1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 7)
-rotation = 3.14159
+rotation = 3.13674
 scale = Vector2(0.192752, 0.192752)
 texture = ExtResource("2_0ajaq")
 region_enabled = true
