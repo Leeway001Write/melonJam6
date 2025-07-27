@@ -16,6 +16,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	if not Input.is_action_pressed('fire') or not attached: return
+	#if not $Shoot.playing:
+	$Shoot.play()
 	var bullet_inst:CharacterBody2D = bullet.instantiate()
 	bullet_inst.velocity = dir * speed + ship.velocity
 	bullet_inst.global_position = $ForwardPos.global_position
