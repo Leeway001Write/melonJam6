@@ -9,7 +9,8 @@ func _ready() -> void:
 var score = 0
 
 func _process(delta: float) -> void:
-	global_position = cam.global_position
+	if is_instance_valid(cam):
+		global_position = cam.global_position
 	
 func increase_score(amount:int):
 	score += amount
