@@ -41,7 +41,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		_attach_item(area.get_parent(), area)
 		
 	if area.is_in_group('DamagePlayer'):
-		if health > 0:
+		if health > 0 and health < 50:
 			$AudioStreamPlayer2D.play(0)
 			health -= 3
 			print(health)
