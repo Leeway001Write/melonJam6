@@ -284,82 +284,66 @@ rotation = 0.845674
 [node name="ChargingEnemy4" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-11292, -8048)
 rotation = 0.225928
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy5" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-14858, -3382)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy9" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-9287, -2513)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy10" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-4093, -4692)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy11" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-6469, -2300)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy12" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-783.001, -7298)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy17" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-12009, -5669)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy18" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-10915, -2327)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy19" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-8001, -5134)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy20" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-6146, -7180)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy21" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-2531, -9071)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy22" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-569, -6371)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy23" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-3043, -5122)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy24" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-3043, -5122)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy13" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-4519, -9248)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy14" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-12122, -9674)
 rotation = -0.526806
-scale = Vector2(1, 1)
 
 [node name="ChargingEnemy6" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
 position = Vector2(-4688, -10123)
@@ -592,10 +576,6 @@ scale = Vector2(1.42963, 1.42963)
 
 [node name="Asteroid180" parent="Asteroids" instance=ExtResource("1_4orne")]
 position = Vector2(-3179, -245)
-scale = Vector2(1.42963, 1.42963)
-
-[node name="Asteroid181" parent="Asteroids" instance=ExtResource("1_4orne")]
-position = Vector2(-776, -1631)
 scale = Vector2(1.42963, 1.42963)
 
 [node name="Asteroid182" parent="Asteroids" instance=ExtResource("1_4orne")]
