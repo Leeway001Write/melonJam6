@@ -11,10 +11,11 @@ size = Vector2(22.4269, 7.3756)
 [node name="Sprite2D" type="Sprite2D" parent="." index="0"]
 position = Vector2(3, 3)
 rotation = 0.388679
-scale = Vector2(0.269787, 0.269787)
+scale = Vector2(0.367154, 0.367154)
 texture = ExtResource("2_rafqi")
 region_enabled = true
 region_rect = Rect2(1731, 663, 448, 342)
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
+scale = Vector2(4.32245, 9.29642)
 shape = SubResource("RectangleShape2D_rafqi")

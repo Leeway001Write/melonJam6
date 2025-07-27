@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bk1chkf7q5ppn"]
+[gd_scene load_steps=10 format=3 uid="uid://bk1chkf7q5ppn"]
 
 [ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="1_txyqp"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_u7fam"]
@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/junk/ship_junk_1.tscn" id="4_31083"]
 [ext_resource type="PackedScene" uid="uid://kapus6jy5k7d" path="res://Prefabs/junk/ship_junk_2.tscn" id="5_c8umy"]
 [ext_resource type="PackedScene" uid="uid://ujyk5py8wvlf" path="res://Prefabs/junk/ship_junk_3.tscn" id="6_jn7km"]
+[ext_resource type="PackedScene" uid="uid://brh3sg71u08ag" path="res://Prefabs/junk/fridge.tscn" id="7_31083"]
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="7_aebji"]
+[ext_resource type="PackedScene" uid="uid://cxc1c084anagj" path="res://Prefabs/junk/controller.tscn" id="8_c8umy"]
 
 [node name="Q5" type="Node2D"]
 
@@ -19,62 +21,71 @@ rotation = 0.547803
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Booster" parent="Items" instance=ExtResource("2_u7fam")]
-position = Vector2(360, -14)
+position = Vector2(346, -221)
 
 [node name="Gun" parent="Items" instance=ExtResource("3_jplls")]
-position = Vector2(-395, -2)
+position = Vector2(-443, 254)
 rotation = 0.415374
 
 [node name="ShipJunk1" parent="Items" instance=ExtResource("4_31083")]
-position = Vector2(592, -473)
+position = Vector2(803, 261)
 
 [node name="ShipJunk2" parent="Items" instance=ExtResource("5_c8umy")]
-position = Vector2(-1708, 787)
+position = Vector2(-2527, 590)
 
 [node name="ShipJunk3" parent="Items" instance=ExtResource("5_c8umy")]
-position = Vector2(-862, -819)
+position = Vector2(-687, 746)
 
 [node name="ShipJunk4" parent="Items" instance=ExtResource("5_c8umy")]
-position = Vector2(906, 933)
+position = Vector2(1032, 1288)
 
 [node name="ShipJunk5" parent="Items" instance=ExtResource("5_c8umy")]
-position = Vector2(870, -1597)
+position = Vector2(-1319, -1310)
 
 [node name="ShipJunk6" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(1181, 388)
+position = Vector2(1233, 581)
 
 [node name="ShipJunk7" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(-1494, -615)
+position = Vector2(-2697, -652)
 
 [node name="ShipJunk8" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(-1139, 329)
+position = Vector2(-1550, 693)
 
 [node name="ShipJunk9" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(-503, -664)
+position = Vector2(1189, -434)
 
 [node name="ShipJunk10" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(-744, 907)
+position = Vector2(2265, 394)
 
 [node name="ShipJunk11" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(631, 1613)
+position = Vector2(281, 1919)
 
 [node name="ShipJunk12" parent="Items" instance=ExtResource("6_jn7km")]
-position = Vector2(1692, -637)
+position = Vector2(286, -2119)
 
 [node name="ShipJunk13" parent="Items" instance=ExtResource("4_31083")]
-position = Vector2(-388, 553)
+position = Vector2(-970, -243)
 
 [node name="ShipJunk14" parent="Items" instance=ExtResource("4_31083")]
 position = Vector2(-2069, -957)
 
 [node name="ShipJunk15" parent="Items" instance=ExtResource("4_31083")]
-position = Vector2(-1204, 1238)
+position = Vector2(-790, 2402)
 
 [node name="ShipJunk16" parent="Items" instance=ExtResource("4_31083")]
-position = Vector2(1633, 773)
+position = Vector2(2780, -291)
 
 [node name="ShipJunk17" parent="Items" instance=ExtResource("4_31083")]
 position = Vector2(985, -1003)
+
+[node name="Fridge" parent="Items" instance=ExtResource("7_31083")]
+position = Vector2(1753, 936)
+
+[node name="Controller" parent="Items" instance=ExtResource("8_c8umy")]
+position = Vector2(2128, 1680)
+
+[node name="Booster2" parent="Items" instance=ExtResource("2_u7fam")]
+position = Vector2(-511, -1233)
 
 [node name="Asteroids" type="Node2D" parent="."]
 
