@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3xvawqsoufaa"]
+[gd_scene load_steps=4 format=3 uid="uid://c3xvawqsoufaa"]
 
-[ext_resource type="PackedScene" uid="uid://o2wqv4w0qqio" path="res://Prefabs/junk-component.tscn" id="1_lv12c"]
+[ext_resource type="PackedScene" uid="uid://cka7ljsit01k7" path="res://Prefabs/junk/junk-component.tscn" id="1_lv12c"]
 [ext_resource type="Texture2D" uid="uid://dw4t46v0meubt" path="res://Art/components/junk/wall-e.png" id="2_yvrph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aep4"]
 
 [node name="Wall-E" instance=ExtResource("1_lv12c")]
 
@@ -13,3 +15,4 @@ texture = ExtResource("2_yvrph")
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(0, -4.5)
 scale = Vector2(4.12757, 7.86377)
+shape = SubResource("RectangleShape2D_2aep4")

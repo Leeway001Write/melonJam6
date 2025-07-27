@@ -1,17 +1,564 @@
-[gd_scene load_steps=7 format=3 uid="uid://djiw2e2j20dg7"]
+[gd_scene load_steps=20 format=3 uid="uid://djiw2e2j20dg7"]
 
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="1_4orne"]
+[ext_resource type="PackedScene" uid="uid://rk3w2tikjskl" path="res://Prefabs/charging-enemy.tscn" id="1_8grf0"]
+[ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="1_n3r2x"]
 [ext_resource type="Texture2D" uid="uid://dga5sunif18bf" path="res://Art/backgrounds/pink-purple/pink1.png" id="2_8grf0"]
 [ext_resource type="Texture2D" uid="uid://bn57s67hq2t6x" path="res://Art/backgrounds/pink-purple/pink2.png" id="3_acr3u"]
+[ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="3_j4fqv"]
 [ext_resource type="Texture2D" uid="uid://cyndxbmuaxn10" path="res://Art/backgrounds/pink-purple/purple1.png" id="4_17767"]
+[ext_resource type="PackedScene" uid="uid://denns5wufrwr1" path="res://Prefabs/medkit.tscn" id="4_fnhp0"]
 [ext_resource type="Texture2D" uid="uid://d07qj2h6dtkdf" path="res://Art/backgrounds/pink-purple/purple2.png" id="5_nknow"]
+[ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="5_v26cq"]
 [ext_resource type="Texture2D" uid="uid://525ix3uu0f82" path="res://Art/backgrounds/pink-purple/purple3.png" id="6_cqybr"]
+[ext_resource type="PackedScene" uid="uid://brh3sg71u08ag" path="res://Prefabs/junk/fridge.tscn" id="6_gytut"]
+[ext_resource type="PackedScene" uid="uid://cxc1c084anagj" path="res://Prefabs/junk/controller.tscn" id="7_ctq23"]
+[ext_resource type="PackedScene" uid="uid://kapus6jy5k7d" path="res://Prefabs/junk/ship_junk_2.tscn" id="8_a72dy"]
+[ext_resource type="PackedScene" uid="uid://ujyk5py8wvlf" path="res://Prefabs/junk/ship_junk_3.tscn" id="9_ypb0f"]
+[ext_resource type="PackedScene" uid="uid://bryb7c4161wtf" path="res://Prefabs/junk/ship_junk_1.tscn" id="10_wckf6"]
+[ext_resource type="PackedScene" uid="uid://bgfd22oa3mqvx" path="res://Prefabs/junk/cheed.tscn" id="11_33biv"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_acr3u"]
+
+[sub_resource type="Curve2D" id="Curve2D_tgyto"]
+_data = {
+"points": PackedVector2Array(506.533, -106.209, -506.533, 106.209, 71, -883, -8.16989, -531.043, 8.16989, 531.043, -1382, 507, -674.016, 138.888, 674.016, -138.888, -146, 1310, 81.6989, 482.024, -81.6989, -482.024, 1314, -331, 188.744, -29.4077, -188.744, 29.4077, 71, -883)
+}
+point_count = 5
 
 [node name="Q2" type="Node2D"]
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
+modulate = Color(0.21, 0.21, 0.21, 1)
+position = Vector2(-7902.53, -5159.76)
+rotation = 3.14159
+scale = Vector2(15810.3, 10309.8)
+mesh = SubResource("QuadMesh_acr3u")
+
 [node name="Enemies" type="Node2D" parent="."]
 
+[node name="PathEnemies" type="Node2D" parent="Enemies"]
+
+[node name="PathEnemy" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-10867, -4871)
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy2" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-9702, -1767)
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy14" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-4683, -4514)
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy15" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-1210, -9699)
+rotation = 0.83619
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy16" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-9285, -6465)
+rotation = -0.705361
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy6" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-12868, -8084)
+rotation = 0.344909
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy7" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-14063, -3812)
+rotation = -0.238572
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy3" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-2073, -6447)
+rotation = 1.17063
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy4" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-3720, -2501)
+rotation = 0.178712
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy5" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-6834, -6469)
+rotation = 0.851345
+curve = SubResource("Curve2D_tgyto")
+
+[node name="PathEnemy8" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-1079, -3761)
+rotation = 1.09402
+
+[node name="PathEnemy9" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-7608, -3391)
+rotation = 0.608643
+
+[node name="PathEnemy10" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-4961, -8071)
+rotation = 1.45893
+
+[node name="PathEnemy17" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-6793, -1602)
+rotation = 0.065509
+
+[node name="PathEnemy18" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-15118, -1031)
+rotation = 0.065509
+
+[node name="PathEnemy19" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-7614, -9784)
+rotation = 0.065509
+
+[node name="PathEnemy20" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-14095, -9701)
+rotation = 0.065509
+
+[node name="PathEnemy21" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-15463, -7489)
+rotation = 0.065509
+
+[node name="PathEnemy22" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-930.001, -7822)
+rotation = 0.065509
+
+[node name="PathEnemy23" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-4700, -6347)
+rotation = 0.065509
+
+[node name="PathEnemy24" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-11300, -2993)
+rotation = 0.065509
+
+[node name="PathEnemy25" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-7756, -4943)
+rotation = 0.065509
+
+[node name="PathEnemy26" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-10836, -9105)
+rotation = 0.065509
+
+[node name="PathEnemy27" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-15331, -5240)
+rotation = 0.065509
+
+[node name="PathEnemy28" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-14332, -2695)
+rotation = 0.065509
+
+[node name="PathEnemy29" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-11835, -6405)
+rotation = 0.065509
+
+[node name="PathEnemy30" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-5223, -1125)
+rotation = 0.065509
+
+[node name="PathEnemy31" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-3285, -3682)
+rotation = 0.065509
+
+[node name="PathEnemy13" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-9766, -8142)
+rotation = 2.40677
+
+[node name="PathEnemy11" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-12539, -1005)
+rotation = 0.230605
+
+[node name="PathEnemy12" parent="Enemies/PathEnemies" instance=ExtResource("1_n3r2x")]
+position = Vector2(-13859, -5704)
+rotation = 0.230605
+
+[node name="ChargingEnemies" type="Node2D" parent="Enemies"]
+
+[node name="ChargingEnemy" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-4686, -6489)
+rotation = 1.80377
+
+[node name="ChargingEnemy2" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9197, -6353)
+rotation = 1.20849
+
+[node name="ChargingEnemy25" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-16202, -7043)
+rotation = 1.20849
+
+[node name="ChargingEnemy26" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-16202, -3880)
+rotation = 1.20849
+
+[node name="ChargingEnemy27" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-16571, -5890)
+rotation = 1.20849
+
+[node name="ChargingEnemy28" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-13360, -10968)
+rotation = 1.20849
+
+[node name="ChargingEnemy29" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-7342, -11027)
+rotation = 1.20849
+
+[node name="ChargingEnemy30" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-4369, -11027)
+rotation = 1.20849
+
+[node name="ChargingEnemy31" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-1491, -10932)
+rotation = 1.20849
+
+[node name="ChargingEnemy32" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-2419, -9957)
+rotation = 1.20849
+
+[node name="ChargingEnemy33" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9233, -9802)
+rotation = 1.20849
+
+[node name="ChargingEnemy34" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-14620, -9945)
+rotation = 1.20849
+
+[node name="ChargingEnemy35" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-15322, -6425)
+rotation = 1.20849
+
+[node name="ChargingEnemy36" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-14941, -5200)
+rotation = 1.20849
+
+[node name="ChargingEnemy37" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-12360, -5022)
+rotation = 1.20849
+
+[node name="ChargingEnemy38" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-12039, -3119)
+rotation = 1.20849
+
+[node name="ChargingEnemy39" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-11207, -585.999)
+rotation = 1.20849
+
+[node name="ChargingEnemy40" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9114, -633.999)
+rotation = 1.20849
+
+[node name="ChargingEnemy41" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-5606, -2846)
+rotation = 1.20849
+
+[node name="ChargingEnemy42" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-5428, -1597)
+rotation = 1.20849
+
+[node name="ChargingEnemy44" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-5000, -5629)
+rotation = 1.20849
+
+[node name="ChargingEnemy45" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-6498, -10065)
+rotation = 1.20849
+
+[node name="ChargingEnemy46" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9412, -6997)
+rotation = 1.20849
+
+[node name="ChargingEnemy47" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-10268, -4476)
+rotation = 1.20849
+
+[node name="ChargingEnemy48" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-8532, -2835)
+rotation = 1.20849
+
+[node name="ChargingEnemy3" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-13211, -4190)
+rotation = 0.845674
+
+[node name="ChargingEnemy15" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-6121, -942)
+rotation = 0.845674
+
+[node name="ChargingEnemy4" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-11292, -8048)
+rotation = 0.225928
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy5" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-14858, -3382)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy9" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9287, -2513)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy10" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-4093, -4692)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy11" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-6469, -2300)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy12" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-783.001, -7298)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy17" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-12009, -5669)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy18" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-10915, -2327)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy19" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-8001, -5134)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy20" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-6146, -7180)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy21" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-2531, -9071)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy22" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-569, -6371)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy23" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-3043, -5122)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy24" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-3043, -5122)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy13" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-4519, -9248)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy14" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-12122, -9674)
+rotation = -0.526806
+scale = Vector2(1, 1)
+
+[node name="ChargingEnemy6" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-4688, -10123)
+rotation = 0.606924
+
+[node name="ChargingEnemy54" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-12612, -6240)
+rotation = 0.606924
+
+[node name="ChargingEnemy55" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-11558, -4306)
+rotation = 0.606924
+
+[node name="ChargingEnemy56" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-8541, -8520)
+rotation = 0.606924
+
+[node name="ChargingEnemy57" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-6246, -5994)
+rotation = 0.606924
+
+[node name="ChargingEnemy58" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-5308, -10208)
+rotation = 0.606924
+
+[node name="ChargingEnemy59" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-12351, -3973)
+rotation = 0.606924
+
+[node name="ChargingEnemy60" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-6693, -3829)
+rotation = 0.606924
+
+[node name="ChargingEnemy61" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-1555, -4969)
+rotation = 0.606924
+
+[node name="ChargingEnemy62" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-4081, -2371)
+rotation = 0.606924
+
+[node name="ChargingEnemy63" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9753, -1317)
+rotation = 0.606924
+
+[node name="ChargingEnemy64" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-9262, -4305)
+rotation = 0.606924
+
+[node name="ChargingEnemy65" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-8295, -7870)
+rotation = 0.606924
+
+[node name="ChargingEnemy66" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-3864, -10035)
+rotation = 0.606924
+
+[node name="ChargingEnemy67" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-11355, -10064)
+rotation = 0.606924
+
+[node name="ChargingEnemy7" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-14693, -7200)
+rotation = -0.218055
+
+[node name="ChargingEnemy49" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-15359, -848.999)
+rotation = -0.218055
+
+[node name="ChargingEnemy50" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-16417, -1907)
+rotation = -0.218055
+
+[node name="ChargingEnemy51" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-16465, -265.999)
+rotation = -0.218055
+
+[node name="ChargingEnemy52" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-16215, -3073)
+rotation = -0.218055
+
+[node name="ChargingEnemy53" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-588, -9578)
+rotation = -0.218055
+
+[node name="ChargingEnemy8" parent="Enemies/ChargingEnemies" instance=ExtResource("1_8grf0")]
+position = Vector2(-1570, -9431)
+rotation = -0.218055
+
 [node name="Items" type="Node2D" parent="."]
+
+[node name="Guns" type="Node2D" parent="Items"]
+
+[node name="Gun" parent="Items/Guns" instance=ExtResource("3_j4fqv")]
+position = Vector2(-2177, -1761)
+
+[node name="Gun3" parent="Items/Guns" instance=ExtResource("3_j4fqv")]
+position = Vector2(-5307, -4573)
+
+[node name="Gun8" parent="Items/Guns" instance=ExtResource("3_j4fqv")]
+position = Vector2(-14930, -2005)
+
+[node name="Gun9" parent="Items/Guns" instance=ExtResource("3_j4fqv")]
+position = Vector2(-10442, -758)
+
+[node name="Gun18" parent="Items/Guns" instance=ExtResource("3_j4fqv")]
+position = Vector2(-12193, -8007)
+
+[node name="Medkits" type="Node2D" parent="Items"]
+
+[node name="Medkit" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-2945, -905)
+rotation = -1.23766
+
+[node name="Medkit2" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-3934, -5571)
+rotation = 0.432178
+
+[node name="Medkit3" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-3486, -9161)
+rotation = -0.159281
+
+[node name="Medkit4" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-11474, -6766)
+rotation = 0.225217
+
+[node name="Medkit5" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-12648, -2975)
+rotation = 0.225217
+
+[node name="Medkit6" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-7329, -9419)
+rotation = 0.225217
+
+[node name="Medkit7" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-10386, -1838)
+rotation = 0.225217
+
+[node name="Medkit8" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-14910, -8160)
+rotation = 0.225217
+
+[node name="Medkit9" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-14702, -982)
+rotation = 0.225217
+
+[node name="Medkit10" parent="Items/Medkits" instance=ExtResource("4_fnhp0")]
+position = Vector2(-14702, -982)
+rotation = 0.225217
+
+[node name="Booster" type="Node2D" parent="Items"]
+
+[node name="Booster" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-1602, -1076)
+
+[node name="Booster3" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-2727, -6175)
+
+[node name="Booster4" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-5857, -9219)
+
+[node name="Booster5" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-15002, -4440)
+
+[node name="Booster7" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-11840, -1311)
+
+[node name="Booster8" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-12922, -9408)
+
+[node name="Booster10" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-7875, -6884)
+
+[node name="Booster11" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-7400, -2740)
+
+[node name="Booster12" parent="Items/Booster" instance=ExtResource("5_v26cq")]
+position = Vector2(-8425, -4414)
+
+[node name="Fridge" parent="Items" instance=ExtResource("6_gytut")]
+position = Vector2(-7593, -5906)
+
+[node name="Controller" parent="Items" instance=ExtResource("7_ctq23")]
+position = Vector2(-11971, -2213)
+
+[node name="ShipJunk2" parent="Items" instance=ExtResource("8_a72dy")]
+position = Vector2(-7006, -1663)
+
+[node name="ShipJunk4" parent="Items" instance=ExtResource("8_a72dy")]
+position = Vector2(-10809, -3475)
+
+[node name="ShipJunk3" parent="Items" instance=ExtResource("9_ypb0f")]
+position = Vector2(-8193, -9073)
+
+[node name="ShipJunk1" parent="Items" instance=ExtResource("10_wckf6")]
+position = Vector2(-4023, -7018)
+
+[node name="Cheed" parent="Items" instance=ExtResource("11_33biv")]
+position = Vector2(-587, -5295)
 
 [node name="Asteroids" type="Node2D" parent="."]
 
@@ -41,6 +588,42 @@ scale = Vector2(1.42963, 1.42963)
 
 [node name="Asteroid177" parent="Asteroids" instance=ExtResource("1_4orne")]
 position = Vector2(-6318, -4463)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid180" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-3179, -245)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid181" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-776, -1631)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid182" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-5674, -409)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid183" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-8420, -1145)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid184" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-9576, -3371)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid185" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-4339, -3785)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid186" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-3825, -7823)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid187" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-4579, -903)
+scale = Vector2(1.42963, 1.42963)
+
+[node name="Asteroid188" parent="Asteroids" instance=ExtResource("1_4orne")]
+position = Vector2(-1262, -2667)
 scale = Vector2(1.42963, 1.42963)
 
 [node name="Asteroid178" parent="Asteroids" instance=ExtResource("1_4orne")]
@@ -107,14 +690,6 @@ scale = Vector2(0.242717, 0.241304)
 position = Vector2(-14247, -8673)
 scale = Vector2(0.242717, 0.241304)
 
-[node name="Asteroid141" parent="Asteroids" instance=ExtResource("1_4orne")]
-position = Vector2(-17280, 4942)
-scale = Vector2(0.242717, 0.241304)
-
-[node name="Asteroid143" parent="Asteroids" instance=ExtResource("1_4orne")]
-position = Vector2(-17780, 3370)
-scale = Vector2(0.242717, 0.241304)
-
 [node name="Asteroid144" parent="Asteroids" instance=ExtResource("1_4orne")]
 position = Vector2(-13631, -9384)
 scale = Vector2(0.242717, 0.241304)
@@ -155,10 +730,6 @@ scale = Vector2(0.242717, 0.241304)
 position = Vector2(-17034, -6921)
 scale = Vector2(1.02183, 1.01588)
 
-[node name="Asteroid157" parent="Asteroids" instance=ExtResource("1_4orne")]
-position = Vector2(-18145, 1220)
-scale = Vector2(0.242717, 0.241304)
-
 [node name="Asteroid158" parent="Asteroids" instance=ExtResource("1_4orne")]
 position = Vector2(-17048, -2490)
 scale = Vector2(1.02183, 1.01588)
@@ -186,7 +757,6 @@ scale = Vector2(1.02183, 1.01588)
 [node name="Art" type="Node2D" parent="."]
 
 [node name="Background" type="Node2D" parent="Art"]
-visible = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Art/Background"]
 modulate = Color(1, 1, 1, 0.486275)
