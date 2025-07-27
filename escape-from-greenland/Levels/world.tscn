@@ -541,12 +541,10 @@ rotation = -2.57143
 [node name="Booster8" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-16230, 6412)
 rotation = 0.0778562
-scale = Vector2(1, 1)
 
 [node name="Booster11" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-4528, 7945)
 rotation = 1.12886
-scale = Vector2(1, 1)
 
 [node name="Booster9" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-12974, 8985)
