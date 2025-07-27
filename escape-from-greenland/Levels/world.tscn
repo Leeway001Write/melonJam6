@@ -21,7 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="18_oyb16"]
 [ext_resource type="PackedScene" uid="uid://ccrjlto8qhso5" path="res://Prefabs/gun.tscn" id="19_43wwi"]
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="20_p3ug2"]
-[ext_resource type="PackedScene" uid="uid://denns5wufrwr1" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
+[ext_resource type="PackedScene" path="res://Prefabs/medkit.tscn" id="21_8mbvr"]
 [ext_resource type="Script" uid="uid://rpsbhilqwmsp" path="res://Scripts/score.gd" id="21_gtojq"]
 [ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="21_pr8ms"]
 
@@ -1526,6 +1526,7 @@ position = Vector2(118, -589)
 rotation = -2.47598
 
 [node name="Gun5" parent="Q5/Items" instance=ExtResource("19_43wwi")]
+position = Vector2(-359, 0)
 
 [node name="Asteroids" type="Node2D" parent="Q5"]
 
