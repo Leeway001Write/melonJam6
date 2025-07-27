@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci784l1soqt2a"]
+
+[ext_resource type="AudioStream" uid="uid://ttxlnn3pxicf" path="res://Sound/SFX/explosion.wav" id="1_7u812"]
+
+[node name="ShipSound" type="Node2D"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_7u812")
+volume_db = 5.0
+autoplay = true

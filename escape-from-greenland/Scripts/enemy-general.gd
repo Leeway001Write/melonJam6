@@ -8,6 +8,7 @@ class_name Enemy
 
 @onready var player:CharacterBody2D = get_tree().get_first_node_in_group('Player')
 @onready var score_manager = get_tree().get_first_node_in_group('Score')
+@onready var explosion_sound = preload("res://Prefabs/explode-sound.tscn")
 
 var activated = false
 var player_dist
@@ -23,6 +24,9 @@ func _hurt():
 		_die()
 		
 func _die(): # Guess I'll die *shrug*
+	var explode_sound_inst = explosion_sound.instantiate()
+	explode_sound_inst.global_position = get_tree().get_first_node_in_group('Cam').global_position
+	get_tree().root.add_child.call_deferred(explode_sound_inst)
 	score_manager.increase_score(points)
 	$Sprite2D.play()
 	$Area2D.queue_free()
