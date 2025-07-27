@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dbwop227trwpa"]
+
+[ext_resource type="FontFile" uid="uid://cu50bi6hkwr8v" path="res://Fonts/Audiowide/Audiowide-Regular.ttf" id="1_sb3rf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7blt"]
+bg_color = Color(0.0914235, 0.279109, 0.279129, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 10
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 10
+
+[resource]
+default_font = ExtResource("1_sb3rf")
+default_font_size = 200
+Button/font_sizes/font_size = 125
+Button/styles/normal = SubResource("StyleBoxFlat_p7blt")

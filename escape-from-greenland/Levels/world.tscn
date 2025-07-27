@@ -443,22 +443,18 @@ rotation = 0.415374
 [node name="Gun14" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
 position = Vector2(-13339, 1980)
 rotation = -0.824687
-scale = Vector2(1, 1)
 
 [node name="Gun15" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
 position = Vector2(-17399, 4857)
 rotation = -0.824687
-scale = Vector2(1, 1)
 
 [node name="Gun16" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
 position = Vector2(-17336, 7513)
 rotation = -0.824687
-scale = Vector2(1, 1)
 
 [node name="Gun17" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
 position = Vector2(-11196, 8240)
 rotation = -0.824687
-scale = Vector2(1, 1)
 
 [node name="Gun18" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
 position = Vector2(-7073, 7285)
@@ -549,7 +545,6 @@ rotation = 1.12886
 [node name="Booster9" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-12974, 8985)
 rotation = 0.282427
-scale = Vector2(1, 1)
 
 [node name="Booster12" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-9509, 10611)
@@ -558,7 +553,6 @@ rotation = -0.908349
 [node name="Booster13" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-7427, 8647)
 rotation = 0.970717
-scale = Vector2(1, 1)
 
 [node name="Booster14" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-5321, 7304)
