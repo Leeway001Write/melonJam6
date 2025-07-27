@@ -25,6 +25,9 @@ func _ready() -> void:
 		#trigger.get_child(0).disabled = true
 		
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("destroy") and not initial and attached:
+		queue_free()
+		get_tree().get_first_node_in_group('Cam').shake()
 	if not attached:
 		rotate(deg_to_rad(rot_speed))
 		move_and_slide()

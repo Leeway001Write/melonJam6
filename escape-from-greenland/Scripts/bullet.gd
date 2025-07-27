@@ -5,6 +5,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	if $Area2D.is_in_group('Asteroid'):
+		queue_free()
 	if $Area2D.is_in_group("DamagePlayer"):
 		if area.is_in_group('Component'):
 			if area.get_parent().initial: return

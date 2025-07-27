@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bk1chkf7q5ppn"]
+[gd_scene load_steps=12 format=3 uid="uid://bk1chkf7q5ppn"]
 
 [ext_resource type="PackedScene" uid="uid://bn1lygxg8oxdq" path="res://Prefabs/path-enemy.tscn" id="1_txyqp"]
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="2_u7fam"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://brh3sg71u08ag" path="res://Prefabs/junk/fridge.tscn" id="7_31083"]
 [ext_resource type="PackedScene" uid="uid://c5k803o78b381" path="res://Prefabs/asteroid.tscn" id="7_aebji"]
 [ext_resource type="PackedScene" uid="uid://cxc1c084anagj" path="res://Prefabs/junk/controller.tscn" id="8_c8umy"]
+[ext_resource type="Texture2D" uid="uid://l5vls0kk0o1k" path="res://Art/signs.png" id="10_31083"]
+[ext_resource type="Texture2D" uid="uid://dtsi86ifm8fag" path="res://Art/light-texture.png" id="11_c8umy"]
 
 [node name="Q5" type="Node2D"]
 
@@ -258,3 +260,115 @@ scale = Vector2(0.351033, 0.348989)
 [node name="Art" type="Node2D" parent="."]
 
 [node name="Background" type="Node2D" parent="Art"]
+
+[node name="Sign 1" type="Sprite2D" parent="Art/Background"]
+z_index = -5
+position = Vector2(-1037, 274)
+scale = Vector2(0.481515, 0.481515)
+texture = ExtResource("10_31083")
+region_enabled = true
+region_rect = Rect2(15.4452, 74.3732, 1339.56, 765.466)
+
+[node name="PointLight2D" type="PointLight2D" parent="Art/Background/Sign 1"]
+position = Vector2(-436.123, 139.144)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Art/Background/Sign 1"]
+position = Vector2(-191.064, 151.605)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Art/Background/Sign 1"]
+position = Vector2(122.53, 166.142)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Art/Background/Sign 1"]
+position = Vector2(425.74, 201.447)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="Sign 2" type="Sprite2D" parent="Art/Background"]
+z_index = -5
+position = Vector2(-621, -722)
+scale = Vector2(0.481515, 0.481515)
+texture = ExtResource("10_31083")
+region_enabled = true
+region_rect = Rect2(15.4452, 839.839, 1339.56, 768.028)
+
+[node name="PointLight2D" type="PointLight2D" parent="Art/Background/Sign 2"]
+position = Vector2(-436.123, 139.144)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Art/Background/Sign 2"]
+position = Vector2(-191.064, 151.605)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Art/Background/Sign 2"]
+position = Vector2(122.53, 166.142)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Art/Background/Sign 2"]
+position = Vector2(425.74, 201.447)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="Sign 3" type="Sprite2D" parent="Art/Background"]
+z_index = -5
+position = Vector2(707, 867)
+scale = Vector2(0.481515, 0.481515)
+texture = ExtResource("10_31083")
+region_enabled = true
+region_rect = Rect2(1475.6, 880.869, 1344.99, 726.998)
+
+[node name="PointLight2D" type="PointLight2D" parent="Art/Background/Sign 3"]
+position = Vector2(-436.123, 139.144)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Art/Background/Sign 3"]
+position = Vector2(-191.064, 151.605)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Art/Background/Sign 3"]
+position = Vector2(122.53, 166.142)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Art/Background/Sign 3"]
+position = Vector2(425.74, 201.447)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="Sign 4" type="Sprite2D" parent="Art/Background"]
+z_index = -5
+position = Vector2(823, -318)
+scale = Vector2(0.481515, 0.481515)
+texture = ExtResource("10_31083")
+region_enabled = true
+region_rect = Rect2(1475.6, 121.935, 1344.99, 758.934)
+
+[node name="PointLight2D" type="PointLight2D" parent="Art/Background/Sign 4"]
+position = Vector2(-436.123, 139.144)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Art/Background/Sign 4"]
+position = Vector2(-191.064, 151.605)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Art/Background/Sign 4"]
+position = Vector2(122.53, 166.142)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Art/Background/Sign 4"]
+position = Vector2(425.74, 201.447)
+scale = Vector2(1.66838, 2.87763)
+texture = ExtResource("11_c8umy")
