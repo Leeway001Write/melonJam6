@@ -102,12 +102,18 @@ position = Vector2(1, -70)
 shape = SubResource("RectangleShape2D_fmfi6")
 
 [node name="CollisionShape2DLeftGun" type="CollisionShape2D" parent="Enemy/Area2D"]
-position = Vector2(-80, 49)
+position = Vector2(-88.9368, 49)
 shape = SubResource("RectangleShape2D_ovwhs")
 
 [node name="CollisionShape2DRightGun2" type="CollisionShape2D" parent="Enemy/Area2D"]
 position = Vector2(86, 51)
 shape = SubResource("RectangleShape2D_ovwhs")
+
+[node name="RightArm" type="Node2D" parent="Enemy"]
+position = Vector2(72.1566, 88.9363)
+
+[node name="LeftArm" type="Node2D" parent="Enemy"]
+position = Vector2(72.1557, -86.4199)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
