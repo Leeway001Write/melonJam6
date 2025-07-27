@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://biptd42uig05c"
-path="res://.godot/imported/250725_0031.wav-d60d01aa4c7104602cc19fbf1e35aa78.sample"
+path="res://.godot/imported/250725_0031.wav-b492975113945d1a1c7ee7159df1dbb6.sample"
 
 [deps]
 
-source_file="res://Sound/SFX/250725_0031.wav"
-dest_files=["res://.godot/imported/250725_0031.wav-d60d01aa4c7104602cc19fbf1e35aa78.sample"]
+source_file="res://Sound/SFX/raw files/250725_0031.wav"
+dest_files=["res://.godot/imported/250725_0031.wav-b492975113945d1a1c7ee7159df1dbb6.sample"]
 
 [params]
 

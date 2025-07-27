@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://gjus2b6qt6k1"]
+[gd_scene load_steps=20 format=3 uid="uid://gjus2b6qt6k1"]
 
 [ext_resource type="PackedScene" uid="uid://6t48r1sfmkgl" path="res://Prefabs/booster.tscn" id="1_7nyfi"]
 [ext_resource type="Script" uid="uid://ravio3b5trcs" path="res://Scripts/ship.gd" id="1_ba1si"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://c0m0os5gicw6v" path="res://Sound/Music/6 clarinet.mp3" id="9_c2nu4"]
 [ext_resource type="AudioStream" uid="uid://b3k5uokgby226" path="res://Sound/Music/7 flute.mp3" id="10_uc7nm"]
 [ext_resource type="AudioStream" uid="uid://b6xlppit0juoj" path="res://Sound/Music/8 brass.mp3" id="11_7cayt"]
+[ext_resource type="AudioStream" uid="uid://djaaw0wja3g0a" path="res://Sound/SFX/hit.wav" id="13_dgasq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wqeq"]
 
@@ -173,5 +174,8 @@ position = Vector2(400, 0)
 rotation = -1.57079
 scale = Vector2(75, 75)
 mesh = SubResource("PrismMesh_o8k4e")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_dgasq")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

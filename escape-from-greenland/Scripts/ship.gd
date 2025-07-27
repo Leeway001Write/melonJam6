@@ -42,10 +42,13 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		
 	if area.is_in_group('DamagePlayer'):
 		if health > 0:
+			$AudioStreamPlayer2D.play(0)
 			health -= 3
 			print(health)
 			if health <= 0:
 				print("game over")
+				$AudioStreamPlayer2D.set_pitch_scale(0.5)
+				$AudioStreamPlayer2D.play(0)
 	
 	if area.is_in_group('Consumable'):
 		
