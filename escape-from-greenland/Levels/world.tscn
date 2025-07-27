@@ -116,6 +116,38 @@ mesh = SubResource("QuadMesh_4dvsh")
 
 [node name="Asteroids" type="Node2D" parent="Q1"]
 
+[node name="Asteroid208" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(4066, -5415)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid209" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(7378, -751)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid210" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(15300, -1536)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid211" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(1472, -1732)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid212" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(419, -8833)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid213" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(2846, -11902)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid214" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(20493, -1678)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid215" parent="Q1/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(7085, -559)
+scale = Vector2(0.911279, 0.905972)
+
 [node name="Art" type="Node2D" parent="Q1"]
 
 [node name="Background" type="Node2D" parent="Q1/Art"]
@@ -345,7 +377,6 @@ position = Vector2(-16063, -1033)
 scale = Vector2(0.242717, 0.241304)
 
 [node name="Art" type="Node2D" parent="Q2"]
-visible = false
 
 [node name="Background" type="Node2D" parent="Q2/Art"]
 
@@ -393,63 +424,143 @@ texture = ExtResource("6_7ey7r")
 
 [node name="Items" type="Node2D" parent="Q3"]
 
-[node name="Booster" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Guns" type="Node2D" parent="Q3/Items"]
+
+[node name="Gun6" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-8154, 4718)
+rotation = 0.415374
+
+[node name="Gun12" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-12049, 8455)
+rotation = 0.415374
+
+[node name="Gun13" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-5283, 6248)
+rotation = 0.415374
+
+[node name="Gun14" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-13339, 1980)
+rotation = -0.824687
+scale = Vector2(1, 1)
+
+[node name="Gun15" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-17399, 4857)
+rotation = -0.824687
+scale = Vector2(1, 1)
+
+[node name="Gun16" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-17336, 7513)
+rotation = -0.824687
+scale = Vector2(1, 1)
+
+[node name="Gun17" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-11196, 8240)
+rotation = -0.824687
+scale = Vector2(1, 1)
+
+[node name="Gun18" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-7073, 7285)
+rotation = 0.616608
+
+[node name="Gun19" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-9767, 3320)
+rotation = 0.616608
+
+[node name="Gun20" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-10052, 1240)
+rotation = -0.753501
+
+[node name="Gun21" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-6720, 9771)
+rotation = 2.09008
+
+[node name="Gun22" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-7005, 7691)
+rotation = 0.71997
+
+[node name="Gun7" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-13095, 5714)
+rotation = -2.64943
+
+[node name="Gun10" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-13924, 2860)
+rotation = -2.64943
+
+[node name="Gun23" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-16515, 2170)
+rotation = -4.03815
+
+[node name="Gun11" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-13767, 6803)
+rotation = 2.22356
+
+[node name="Gun8" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-10192, 5136)
+rotation = -1.07841
+
+[node name="Gun9" parent="Q3/Items/Guns" instance=ExtResource("19_43wwi")]
+position = Vector2(-9193, 3898)
+rotation = -2.47598
+
+[node name="Boosters" type="Node2D" parent="Q3/Items"]
+
+[node name="Booster" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-10719, 3258)
 rotation = -0.537254
 
-[node name="Booster2" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster2" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-11899, 4940)
 rotation = 0.432929
 
-[node name="Booster10" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster10" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-10896, 5704)
 rotation = -0.556696
 
-[node name="Booster3" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster3" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-13771, 5289)
 rotation = -0.200609
 
-[node name="Booster4" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster4" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-13386, 6894)
 rotation = 2.66144
 
-[node name="Booster5" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster5" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-9715, 7276)
 rotation = 1.8325
-scale = Vector2(1, 1)
 
-[node name="Booster6" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster6" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-8641, 4078)
 rotation = 1.8325
-scale = Vector2(1, 1)
 
-[node name="Booster7" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster7" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-15892, 2133)
 rotation = -2.57143
 
-[node name="Booster8" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster8" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-16230, 6412)
 rotation = 0.0778562
 scale = Vector2(1, 1)
 
-[node name="Booster11" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster11" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-4528, 7945)
 rotation = 1.12886
 scale = Vector2(1, 1)
 
-[node name="Booster9" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster9" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-12974, 8985)
 rotation = 0.282427
+scale = Vector2(1, 1)
 
-[node name="Booster12" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster12" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-9509, 10611)
 rotation = -0.908349
 
-[node name="Booster13" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster13" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-7427, 8647)
 rotation = 0.970717
+scale = Vector2(1, 1)
 
-[node name="Booster14" parent="Q3/Items" instance=ExtResource("18_oyb16")]
+[node name="Booster14" parent="Q3/Items/Boosters" instance=ExtResource("18_oyb16")]
 position = Vector2(-5321, 7304)
 rotation = 0.19872
 
@@ -1233,6 +1344,106 @@ texture = ExtResource("12_gtojq")
 
 [node name="Asteroids" type="Node2D" parent="Q4"]
 
+[node name="Asteroid191" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(3045, 6299)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid192" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(14972, 4826)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid193" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(5917, 9134)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid194" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(11107, 8021)
+scale = Vector2(0.565704, 0.562409)
+
+[node name="Asteroid195" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(10952, 5514)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid196" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(15185, 8307)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid197" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(13219, 2120)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid198" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(19018, 3610)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid199" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(20562, 6886)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid200" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(17378, 10811)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid201" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(11379, 8018)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid202" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(7772, 11362)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid203" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(3489, 6352)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid204" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(5505, 2294)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid205" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(16965, 1981)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid206" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(19839, 6482)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid207" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(21011, 5926)
+scale = Vector2(0.242717, 0.241304)
+
+[node name="Asteroid6" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(8025, 3146)
+scale = Vector2(3.02128, 3.02128)
+
+[node name="Asteroid7" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(5582, 9734)
+scale = Vector2(1.90219, 1.90219)
+
+[node name="Asteroid8" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(10654, 5163)
+scale = Vector2(1.90219, 1.90219)
+
+[node name="Asteroid9" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(17530, 2245)
+scale = Vector2(1.90219, 1.90219)
+
+[node name="Asteroid10" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(8295, 11730)
+scale = Vector2(1.90219, 1.90219)
+
+[node name="Asteroid11" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(1795, 10951)
+scale = Vector2(1.90219, 1.90219)
+
+[node name="Asteroid12" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(21368, 11466)
+scale = Vector2(1.90219, 1.90219)
+
+[node name="Asteroid13" parent="Q4/Asteroids" instance=ExtResource("20_p3ug2")]
+position = Vector2(20633, 6305)
+scale = Vector2(1.90219, 1.90219)
+
 [node name="Art" type="Node2D" parent="Q4"]
 
 [node name="Background" type="Node2D" parent="Q4/Art"]
@@ -1313,6 +1524,8 @@ rotation = -1.07841
 [node name="Gun4" parent="Q5/Items" instance=ExtResource("19_43wwi")]
 position = Vector2(118, -589)
 rotation = -2.47598
+
+[node name="Gun5" parent="Q5/Items" instance=ExtResource("19_43wwi")]
 
 [node name="Asteroids" type="Node2D" parent="Q5"]
 
